@@ -18,4 +18,11 @@ public class PlayerController : MonoBehaviour
         
     }
     
+    
+    void PlayerJump()
+    {
+        
+    }
+
+    
 }
