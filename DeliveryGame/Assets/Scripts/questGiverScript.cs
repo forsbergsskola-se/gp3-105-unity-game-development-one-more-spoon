@@ -8,11 +8,19 @@ public class questGiverScript : MonoBehaviour
   public GameObject quest;
   public void OnTriggerEnter(Collider other)
   {
-    quest.SetActive(true);
+    if (other.tag == "Player");
+    {
+      quest.SetActive(true);
+    }
+    
   }
 
   public void OnTriggerExit(Collider other)
   {
-    quest.SetActive(false);
+    if (other.tag == "Player");
+    {
+      quest.SetActive(false);
+    }
+    
   }
 }
