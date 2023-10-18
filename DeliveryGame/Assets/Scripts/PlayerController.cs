@@ -12,12 +12,7 @@ public class PlayerController : MonoBehaviour
     public float movementSpeed = 2;
 
     public float rotationSpeed = 2;
-
-    // What is the max speed the player can have. This is used for the animation blend tree.
-    public float maxForwardSpeed = 8;
     
-    // The speed the player tries to get to.
-    private float targetForwardSpeed;
 
     // How fast the player accelerates when moving.
     private const float groundAcceleration = 5;
