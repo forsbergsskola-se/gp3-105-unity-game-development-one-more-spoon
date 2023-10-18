@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Vector2 rotate;
+    public float mouseSensitivity = 0.5f;
+    
     void Start()
     {
         
@@ -13,6 +15,8 @@ public class CameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        rotate.y += Input.GetAxis("Mouse Y") * mouseSensitivity;
+        rotate.x += Input.GetAxis("Mouse X") * mouseSensitivity;
+        transform.localRotation = Quaternion.Euler(-rotate.y, rotate.x, 0);
     }
 }
