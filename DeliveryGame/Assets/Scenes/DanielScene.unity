@@ -183,10 +183,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6818787357320060355, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7608475735808140483, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7687302324908429149, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
+      propertyPath: inventoryGUI
+      value: 
+      objectReference: {fileID: 2015599332}
     - target: {fileID: 7687302324908429149, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
       propertyPath: movementSpeed
       value: 4
