@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    
+    
     // A two dimensinoal vector that holds what direction the player is moving in.
     private Vector2 movementDirection;
     
@@ -17,7 +19,8 @@ public class PlayerController : MonoBehaviour
     bool inventoryToggled = false;
 
     public GameObject inventoryGUI;
-     
+    
+    
 
     Animator animator;
     

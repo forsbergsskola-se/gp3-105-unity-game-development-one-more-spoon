@@ -1825,6 +1825,7 @@ GameObject:
   - component: {fileID: 3118327460884531971}
   - component: {fileID: 6842290729728907340}
   - component: {fileID: 3754620559598048338}
+  - component: {fileID: 2286923915162251861}
   - component: {fileID: 7687302324908429149}
   m_Layer: 0
   m_Name: StevePrefab
@@ -2050,6 +2051,18 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &2286923915162251861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6785475141660642634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2fd5bca9d853f748b4621865ef1e13f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7687302324908429149
 MonoBehaviour:
   m_ObjectHideFlags: 0
