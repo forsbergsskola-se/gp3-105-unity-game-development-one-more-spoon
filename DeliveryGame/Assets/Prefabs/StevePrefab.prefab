@@ -239,4 +239,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 4
-  rotationSpeed: 100
+  rotationSpeed: 200
