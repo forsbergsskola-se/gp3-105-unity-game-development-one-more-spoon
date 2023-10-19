@@ -8,7 +8,7 @@ public class questGiverScript : MonoBehaviour
   public GameObject quest;
   public void OnTriggerEnter(Collider other)
   {
-    if (other.tag == "Player");
+    if (other.CompareTag("Player"));
     {
       quest.SetActive(true);
     }
