@@ -7,7 +7,6 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     
-    
     // A two dimensinoal vector that holds what direction the player is moving in.
     private Vector2 movementDirection;
     
@@ -73,7 +72,7 @@ public class PlayerController : MonoBehaviour
         MovePlayer(movementDirection);
     }
 
-    public void interact(InputAction.CallbackContext context)
+    public void Interact(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
@@ -101,6 +100,16 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+    }
+
+    public void PlayDeathAnimation()
+    {
+        animator.Play("Death");
+    }
+    
+    public void SetBackToIdle()
+    {
+        animator.Play("Idle");
     }
     
 }
