@@ -1,21 +1,32 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Mime;
 using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
     public int health = 100;
     public int score;
     public int cash;
-    public Vector3 startingPosition;
+    public bool isDying = false;
     
+    public Vector3 startingPosition;
+    public Vector3 startingRotation;
+    public TMP_Text cashText;
     public GameObject wastedText;
     
     private void Start()
     {
         startingPosition = this.transform.position;
-        
+        startingRotation = this.transform.rotation.eulerAngles;
+
+    }
+
+    private void Update()
+    {
+        cashText.SetText(cash.ToString());
     }
 
     public void HealPlayer(int healthAdded)
@@ -50,11 +61,14 @@ public class Player : MonoBehaviour
 
     public void Respawn()
     {
+        this.transform.rotation = Quaternion.Euler(startingRotation);
         this.transform.position = startingPosition;
         this.gameObject.GetComponent<PlayerController>().SetBackToIdle();
         this.gameObject.GetComponent<PlayerController>().movementSpeed = 4;
         this.gameObject.GetComponent<PlayerController>().rotationSpeed = 100;
+        isDying = false;
         
+
     }
 
     public void ShowWastedText()
