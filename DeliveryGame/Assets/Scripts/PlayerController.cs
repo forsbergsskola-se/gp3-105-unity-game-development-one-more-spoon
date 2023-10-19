@@ -13,12 +13,11 @@ public class PlayerController : MonoBehaviour
 
     public float rotationSpeed = 2;
     
+    bool interactPressed = false;
+    bool inventoryToggled = false;
 
-    // How fast the player accelerates when moving.
-    private const float groundAcceleration = 5;
-    
-    // How fast the player deccelerates when stopping the movement.
-    private const float groundDecceleration = 25;
+    public GameObject inventoryGUI;
+     
 
     Animator animator;
     
@@ -69,6 +68,36 @@ public class PlayerController : MonoBehaviour
     {
         // Move the player in the movement direction.
         MovePlayer(movementDirection);
+    }
+
+    public void interact(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            interactPressed = true;
+        }
+
+        else if (context.canceled)
+        {
+            interactPressed = false;
+        }
+    }
+    public void Inventory(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            inventoryToggled = !inventoryToggled;
+            if (inventoryToggled)
+            {
+                inventoryGUI.SetActive(true);
+                
+            }
+            else
+            {
+                inventoryGUI.SetActive(false);
+            }
+        }
+
     }
     
 }
