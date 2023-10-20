@@ -14,9 +14,9 @@ public class SmokeInstantDeath : MonoBehaviour
         
     }
 
-    IEnumerator OnTriggerEnter(Collider other)
+    IEnumerator OnTriggerEnter(Collider smokeTrigger)
     {
-        if (other.CompareTag("Player") && player.isDying == false)
+        if (smokeTrigger.CompareTag("Player") && player.isDying == false)
         {
             player.isDying = true;
             player.ShowWastedText();
