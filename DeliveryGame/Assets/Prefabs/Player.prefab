@@ -2027,7 +2027,19 @@ MonoBehaviour:
     m_ActionId: 14146409-635b-46d6-8ad1-e8e05ac7c149
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7687302324908429149}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 335faeab-2f0f-4a76-846b-175115bc90c4
     m_ActionName: Player/Interact[/Keyboard/e]
   - m_PersistentCalls:
@@ -2063,6 +2075,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2fd5bca9d853f748b4621865ef1e13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  score: 0
+  cash: 100
+  isDying: 0
+  startingPosition: {x: 0, y: 0, z: 0}
+  startingRotation: {x: 0, y: 0, z: 0}
+  cashText: {fileID: 356348835798970766, guid: ad4163f4e20b95742a4e7578dafab954, type: 3}
+  wastedText: {fileID: 4695726215098342991, guid: b8457499eb63ece45aa7bc106de64100, type: 3}
 --- !u!114 &7687302324908429149
 MonoBehaviour:
   m_ObjectHideFlags: 0
