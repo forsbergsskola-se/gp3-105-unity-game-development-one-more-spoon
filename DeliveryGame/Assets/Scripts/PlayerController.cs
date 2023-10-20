@@ -16,9 +16,10 @@ public class PlayerController : MonoBehaviour
     
     bool interactPressed = false;
     bool inventoryToggled = false;
+    bool isPaused = false;
 
     public GameObject inventoryGUI;
-    
+    public GameObject pauseMenu;
     
 
     Animator animator;
@@ -59,8 +60,12 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isBackwardsRunning", false);
         }
     }
-    
-    
+
+    private void Awake()
+    {
+        Time.timeScale = 1;
+    }
+
     void Start()
     {
         animator = this.GetComponent<Animator>();
@@ -99,9 +104,28 @@ public class PlayerController : MonoBehaviour
                 inventoryGUI.SetActive(false);
             }
         }
-
     }
 
+    public void Pause(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            isPaused = !isPaused;
+            if (isPaused)
+            {
+                pauseMenu.SetActive(true);
+                Time.timeScale = 0;
+            }
+        
+            else
+            {
+                pauseMenu.SetActive(false);
+                Time.timeScale = 1;
+            
+            }
+        }
+    }
+    
     public void PlayDeathAnimation()
     {
         animator.Play("Death");
