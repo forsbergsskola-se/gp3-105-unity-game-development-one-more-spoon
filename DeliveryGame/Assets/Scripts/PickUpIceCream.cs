@@ -8,7 +8,9 @@ public class PickUpIceCream : MonoBehaviour
 {
     private Player player;
     static int Icecreams = 1;
-
+    // private PickUpIceCream Canvas
+    // I created a canvas in Ice Cream 1 for the Ice-Cream quest text.
+    
     private void Start()
     {
         player = FindFirstObjectByType<Player>();
@@ -21,6 +23,11 @@ public class PickUpIceCream : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (Icecreams == 1)
+        {
+            // Quest activated
+            
+        }
         if (other.CompareTag("Player"))
         {
             Destroy(gameObject);
