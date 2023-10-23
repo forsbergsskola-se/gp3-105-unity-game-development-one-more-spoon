@@ -101,11 +101,26 @@ public class PlayerController : MonoBehaviour
     // ENABLE WHEEL CONTROLLER SCRIPT (SO THE PLAYER CAN MOVE THE CAR WITH INPUT)
     // CHANGE CAMERA SCRIPT PLAYER FIELD TO CAR (TO MAKE IT FOLLOW THE CAR)
     
-    public void Interact(InputAction.CallbackContext context)
+    public void Interact(InputAction.CallbackContext buttonPress)
+    {
+        if (buttonPress.performed)
+        {
+            interactPressed = true;
+            Debug.Log("Interact button Pressed");
+        }
+
+        else if (buttonPress.canceled)
+        {
+            interactPressed = false;
+            Debug.Log("Interact button Released");
+        }
+    }
+    
+    public void Fire(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
-            interactPressed = true;
+            HitMeleeWeapon();
         }
 
         else if (context.canceled)
@@ -113,6 +128,7 @@ public class PlayerController : MonoBehaviour
             interactPressed = false;
         }
     }
+    
     public void Inventory(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -159,5 +175,22 @@ public class PlayerController : MonoBehaviour
     {
         animator.Play("Idle");
     }
+
+    public void FireGun()
+    {
+        
+    }
+
+    public void ReloadGun()
+    {
+        
+    }
+
+    public void HitMeleeWeapon()
+    {
+        animator.Play("MeleeAttack");
+        Debug.Log("Hitting with melee weapon");
+    }
+    
     
 }
