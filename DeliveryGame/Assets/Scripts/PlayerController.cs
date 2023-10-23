@@ -75,8 +75,32 @@ public class PlayerController : MonoBehaviour
     {
         // Move the player in the movement direction.
         MovePlayer(movementDirection);
+        
+        // CHECK INPUT BUTTON
+        //    IF TRUE: ENTER CAR
+        if (Input.GetKey(KeyCode.F))
+        {
+            EnterCar();
+        }
     }
 
+    private Player player;
+    public void EnterCar()
+    {
+        player = FindFirstObjectByType<Player>();
+        this.gameObject.SetActive(false);
+        if (CompareTag("Player"))
+        {
+            this.gameObject.GetComponent<WheelController>().enabled = true;
+            
+        }
+        
+    }
+    // VOID ENTER CAR
+    // DISABLE STEVE GAME OBJECT (SO THE PLAYER "GOES INTO THE CAR")
+    // ENABLE WHEEL CONTROLLER SCRIPT (SO THE PLAYER CAN MOVE THE CAR WITH INPUT)
+    // CHANGE CAMERA SCRIPT PLAYER FIELD TO CAR (TO MAKE IT FOLLOW THE CAR)
+    
     public void Interact(InputAction.CallbackContext context)
     {
         if (context.performed)
