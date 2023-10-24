@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
         this.gameObject.SetActive(false);
         if (CompareTag("Player"))
         {
-            this.gameObject.GetComponent<WheelController>().enabled = true;
+            this.gameObject.GetComponent<DanielsCarMovementScript>().enabled = true;
             
         }
         
