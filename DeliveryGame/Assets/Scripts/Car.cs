@@ -29,9 +29,11 @@ public class Car : MonoBehaviour
     public void ExitCar()
     {
         this.gameObject.SetActive(true); 
+        
         this.gameObject.GetComponent<DanielsCarMovementScript>().enabled = false;
         cameraHolder.SetActive(false);
         
+
     }
     
     
