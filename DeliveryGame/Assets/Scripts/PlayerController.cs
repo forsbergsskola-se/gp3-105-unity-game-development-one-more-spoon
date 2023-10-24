@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed)
         {
-            HitMeleeWeapon();
+            AttackWithMeleeWeapon();
         }
 
         else if (context.canceled)
@@ -188,7 +188,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    public void HitMeleeWeapon()
+    public void AttackWithMeleeWeapon()
     {
         var player = FindFirstObjectByType<Player>();
         player.meleeAttacking = true;
@@ -196,6 +196,13 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Hitting with melee weapon");
         
     }
+
     
+    public void MeleeHit()
+    {
+        var player = FindFirstObjectByType<Player>();
+        player.meleeAttacking = false;
+        
+    }
     
 }

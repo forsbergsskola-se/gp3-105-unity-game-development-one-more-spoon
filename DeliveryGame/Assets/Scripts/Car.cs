@@ -36,7 +36,8 @@ public class Car : MonoBehaviour
 
     }
     
-    private void OnCollisionEnter(Collision hitWithMeleeWeapon)
+    
+     private void OnCollisionEnter(Collision hitWithMeleeWeapon)
     {
         if (hitWithMeleeWeapon.gameObject.CompareTag("Bat") && player.meleeAttacking == true)
         {
@@ -48,5 +49,14 @@ public class Car : MonoBehaviour
             }
         }
     }
+
+     /*
+    public void TakeDamage(int damage)
+    {
+        carHealth -= damage;
+        Debug.Log("The car was hit. Health is now: " + carHealth);
+
+    }
+    */
     
 }
