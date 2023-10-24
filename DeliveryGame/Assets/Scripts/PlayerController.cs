@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
     {
         animator = this.GetComponent<Animator>();
         car = FindFirstObjectByType<Car>();
+        
     }
 
     
@@ -188,8 +189,11 @@ public class PlayerController : MonoBehaviour
 
     public void HitMeleeWeapon()
     {
+        var player = FindFirstObjectByType<Player>();
+        player.meleeAttacking = true;
         animator.Play("MeleeAttack");
         Debug.Log("Hitting with melee weapon");
+        
     }
     
     
