@@ -30,6 +30,7 @@ public class Car : MonoBehaviour
         this.gameObject.SetActive(true); 
         this.gameObject.GetComponent<DanielsCarMovementScript>().enabled = false;
         cameraHolder.SetActive(false);
-        
+        //this.gameObject.transform.position = GameObject.Find("SEDAN").transform.position;
+
     }
 }
