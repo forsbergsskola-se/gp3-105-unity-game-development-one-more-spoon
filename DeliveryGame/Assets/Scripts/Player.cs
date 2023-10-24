@@ -105,6 +105,7 @@ public class Player : MonoBehaviour
         // wait for 3 seconds.
         // Respawn
         Debug.Log("You died!");
+
     }
 
     IEnumerator CheckHealth()

@@ -75,13 +75,52 @@ public class PlayerController : MonoBehaviour
     {
         // Move the player in the movement direction.
         MovePlayer(movementDirection);
+        
+        // CHECK INPUT BUTTON
+        //    IF TRUE: ENTER CAR
+        if (Input.GetKey(KeyCode.F))
+        {
+            EnterCar();
+        }
     }
 
-    public void Interact(InputAction.CallbackContext context)
+    private Player player;
+    public void EnterCar()
+    {
+        player = FindFirstObjectByType<Player>();
+        this.gameObject.SetActive(false);
+        if (CompareTag("Player"))
+        {
+            this.gameObject.GetComponent<WheelController>().enabled = true;
+            
+        }
+        
+    }
+    // VOID ENTER CAR
+    // DISABLE STEVE GAME OBJECT (SO THE PLAYER "GOES INTO THE CAR")
+    // ENABLE WHEEL CONTROLLER SCRIPT (SO THE PLAYER CAN MOVE THE CAR WITH INPUT)
+    // CHANGE CAMERA SCRIPT PLAYER FIELD TO CAR (TO MAKE IT FOLLOW THE CAR)
+    
+    public void Interact(InputAction.CallbackContext buttonPress)
+    {
+        if (buttonPress.performed)
+        {
+            interactPressed = true;
+            Debug.Log("Interact button Pressed");
+        }
+
+        else if (buttonPress.canceled)
+        {
+            interactPressed = false;
+            Debug.Log("Interact button Released");
+        }
+    }
+    
+    public void Fire(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
-            interactPressed = true;
+            HitMeleeWeapon();
         }
 
         else if (context.canceled)
@@ -89,6 +128,7 @@ public class PlayerController : MonoBehaviour
             interactPressed = false;
         }
     }
+    
     public void Inventory(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -135,5 +175,22 @@ public class PlayerController : MonoBehaviour
     {
         animator.Play("Idle");
     }
+
+    public void FireGun()
+    {
+        
+    }
+
+    public void ReloadGun()
+    {
+        
+    }
+
+    public void HitMeleeWeapon()
+    {
+        animator.Play("MeleeAttack");
+        Debug.Log("Hitting with melee weapon");
+    }
+    
     
 }
