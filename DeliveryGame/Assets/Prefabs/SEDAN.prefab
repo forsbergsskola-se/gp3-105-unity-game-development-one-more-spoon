@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 2518396643358754207}
   - component: {fileID: 2780325220130246885}
   m_Layer: 0
-  m_Name: DanielsSEDAN
+  m_Name: SEDAN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -622,7 +622,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085558424244099990}
   serializedVersion: 4
-  m_Mass: 10
+  m_Mass: 1000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -674,6 +674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98dd9e6755256cf49933930f48a9bc51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carHealth: 0
 --- !u!114 &2780325220130246885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -681,13 +682,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085558424244099990}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b619d9f18f8a4fa4ba5f64cccbf5ceb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 500
-  rotationSpeed: 300
+  movementSpeed: 35000
+  rotationSpeed: 10000
 --- !u!1 &1648678691228678828
 GameObject:
   m_ObjectHideFlags: 0
@@ -2904,7 +2905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &743887706394325112
 Transform:
   m_ObjectHideFlags: 0
