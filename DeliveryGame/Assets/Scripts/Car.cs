@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Car : MonoBehaviour
 {
+    public int carHealth;
     // Start is called before the first frame update
     void Start()
     {
@@ -12,6 +13,11 @@ public class Car : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        
+    }
+
+    void EnterCar()
     {
         
     }

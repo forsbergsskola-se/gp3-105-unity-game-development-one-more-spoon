@@ -7,9 +7,10 @@ public class DanielsCarMovementScript : MonoBehaviour
 {
     private Vector2 movementDirection;
     
-    public float movementSpeed = 500;
+    // CAR MASS in unity should be set to 1000.
+    public float movementSpeed = 35000;
 
-    public float rotationSpeed = 300;
+    public float rotationSpeed = 10000;
 
     private Rigidbody carRigidbody;
     
@@ -25,9 +26,9 @@ public class DanielsCarMovementScript : MonoBehaviour
         MoveCar(movementDirection);
     }
     
-    public void OnCarMovement(InputAction.CallbackContext context)
+    public void OnCarMovement(InputAction.CallbackContext buttonPressed)
     {
-        movementDirection = context.ReadValue<Vector2>();
+        movementDirection = buttonPressed.ReadValue<Vector2>();
     }
 
     void MoveCar(Vector2 direction)

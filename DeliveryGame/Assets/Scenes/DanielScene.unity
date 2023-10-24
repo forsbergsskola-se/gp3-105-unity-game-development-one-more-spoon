@@ -1557,6 +1557,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: DanielsSEDAN
       objectReference: {fileID: 0}
+    - target: {fileID: 1797798677847232911, guid: a009a3cbf880377449c9d5b24f3da867, type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2780325220130246885, guid: a009a3cbf880377449c9d5b24f3da867, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2780325220130246885, guid: a009a3cbf880377449c9d5b24f3da867, type: 3}
+      propertyPath: movementSpeed
+      value: 35000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2780325220130246885, guid: a009a3cbf880377449c9d5b24f3da867, type: 3}
+      propertyPath: rotationSpeed
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696747775266867849, guid: a009a3cbf880377449c9d5b24f3da867, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
