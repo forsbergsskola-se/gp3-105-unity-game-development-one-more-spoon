@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementDirection;
     
     public float movementSpeed = 2;
-
+    
     public float rotationSpeed = 2;
     
     bool interactPressed = false;
