@@ -76,6 +76,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3131127f37c9447418deee1cbfffacda, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3810778250806111472}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3131127f37c9447418deee1cbfffacda, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8279257042305908287}
   m_SourcePrefab: {fileID: 100100000, guid: 3131127f37c9447418deee1cbfffacda, type: 3}
 --- !u!1 &7808524868608346726 stripped
 GameObject:
@@ -221,6 +224,18 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 14146409-635b-46d6-8ad1-e8e05ac7c149
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 335faeab-2f0f-4a76-846b-175115bc90c4
+    m_ActionName: Player/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: aa450772-b819-4d03-bfbd-39273cb2e3b7
+    m_ActionName: Player/Inventory[/Keyboard/i]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9336d7e9-a7aa-4fcd-bb4c-e0192eda7255
+    m_ActionName: Player/Pause[/Keyboard/p,/Keyboard/pause,/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -240,3 +255,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 4
   rotationSpeed: 200
+  inventoryGUI: {fileID: 0}
+  pauseMenu: {fileID: 0}
+--- !u!114 &-8279257042305908287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7808524868608346726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98dd9e6755256cf49933930f48a9bc51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carHealth: 99

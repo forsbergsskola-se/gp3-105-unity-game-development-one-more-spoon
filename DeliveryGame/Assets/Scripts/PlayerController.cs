@@ -20,8 +20,10 @@ public class PlayerController : MonoBehaviour
 
     public GameObject inventoryGUI;
     public GameObject pauseMenu;
+    private Car car;
     
-
+    public GameObject steveBody;
+    
     Animator animator;
     
     /// <summary>
@@ -69,16 +71,30 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         animator = this.GetComponent<Animator>();
+        car = FindFirstObjectByType<Car>();
     }
 
-    void Update()
+    
+     void Update()
     {
         // Move the player in the movement direction.
         MovePlayer(movementDirection);
         
-    }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            steveBody.SetActive(false);
+            car.EnterCar();
+        }
 
-    private Player player;
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            steveBody.SetActive(true);
+            car.ExitCar();
+        }
+        
+    }
+     
+    
 
     // VOID ENTER CAR
     // DISABLE STEVE GAME OBJECT (SO THE PLAYER "GOES INTO THE CAR")
