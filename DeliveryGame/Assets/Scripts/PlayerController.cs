@@ -90,6 +90,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G))
         {
             steveBody.SetActive(true);
+            this.gameObject.transform.position = GameObject.Find("SEDAN").transform.position + new Vector3(-2.5f, 0f, 0f);
             car.ExitCar();
         }
         
