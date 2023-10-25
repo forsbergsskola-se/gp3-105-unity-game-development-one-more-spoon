@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementDirection;
     
     public float movementSpeed = 2;
-
+    
     public float rotationSpeed = 2;
     
     bool interactPressed = false;
@@ -20,8 +20,10 @@ public class PlayerController : MonoBehaviour
 
     public GameObject inventoryGUI;
     public GameObject pauseMenu;
+    private Car car;
     
-
+    public GameObject steveBody;
+    
     Animator animator;
     
     /// <summary>
@@ -69,16 +71,32 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         animator = this.GetComponent<Animator>();
+        car = FindFirstObjectByType<Car>();
+        
     }
 
-    void Update()
+    
+     void Update()
     {
         // Move the player in the movement direction.
         MovePlayer(movementDirection);
         
-    }
+        if (Input.GetKeyDown(KeyCode.F) && car.playerCanEnterCar == true)
+        {
+            steveBody.SetActive(false);
+            car.EnterCar();
+        }
 
-    private Player player;
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            steveBody.SetActive(true);
+            this.gameObject.transform.position = GameObject.Find("SEDAN").transform.position + new Vector3(-2.5f, 0f, 0f);
+            car.ExitCar();
+        }
+        
+    }
+     
+    
 
     // VOID ENTER CAR
     // DISABLE STEVE GAME OBJECT (SO THE PLAYER "GOES INTO THE CAR")
@@ -104,7 +122,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed)
         {
-            HitMeleeWeapon();
+            AttackWithMeleeWeapon();
         }
 
         else if (context.canceled)
@@ -170,11 +188,21 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    public void HitMeleeWeapon()
+    public void AttackWithMeleeWeapon()
     {
+        var player = FindFirstObjectByType<Player>();
+        player.meleeAttacking = true;
         animator.Play("MeleeAttack");
         Debug.Log("Hitting with melee weapon");
+        
     }
+
     
+    public void MeleeHit()
+    {
+        var player = FindFirstObjectByType<Player>();
+        player.meleeAttacking = false;
+        
+    }
     
 }

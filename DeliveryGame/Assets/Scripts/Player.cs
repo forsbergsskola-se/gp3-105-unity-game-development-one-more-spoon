@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public int score = 0;
     public int cash = 100;
     public bool isDying = false;
+    public bool meleeAttacking = false;
     
     public Vector3 startingPosition;
     public Vector3 startingRotation;

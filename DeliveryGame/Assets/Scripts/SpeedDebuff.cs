@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class SpeedBuff : MonoBehaviour
+public class SpeedDebuff : MonoBehaviour
 {
     private PlayerController playerController;
 
@@ -18,12 +18,12 @@ public class SpeedBuff : MonoBehaviour
         carScript = GetComponent<DanielsCarMovementScript>();
         if (playerController != null)
         {
-            playerController.movementSpeed = 9;
+            playerController.movementSpeed = 2;
             // add benefit *
         }
         else
         {
-            carScript.movementSpeed = 45000;
+            carScript.movementSpeed = 25000;
         }
         
         timeBuffRemaining = 5;

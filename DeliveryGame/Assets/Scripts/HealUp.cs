@@ -4,28 +4,25 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class SpeedBuff : MonoBehaviour
+public class HealUp : MonoBehaviour
 {
-    private PlayerController playerController;
-
-    private DanielsCarMovementScript carScript;
+    private Player player;
 
     public float timeBuffRemaining;
+
     // add a remainingTimeField: *
     private void Start()
     {
-        playerController = GetComponent<PlayerController>();
-        carScript = GetComponent<DanielsCarMovementScript>();
-        if (playerController != null)
+        player = GetComponent<Player>();
+
+        if (player != null && player.health < 100)
         {
-            playerController.movementSpeed = 9;
+            player.health += 1;
             // add benefit *
         }
-        else
-        {
-            carScript.movementSpeed = 45000;
-        }
-        
+    }
+}
+/*
         timeBuffRemaining = 5;
         // add the benefit to movement *
         // set remaining time to 30 *
@@ -34,8 +31,7 @@ public class SpeedBuff : MonoBehaviour
     private void OnDestroy()
     {
         // remove the benefit from movement*
-        playerController.movementSpeed = 4;
-        carScript.movementSpeed = 35000;
+        player.health = 100;
     }
 
     private void Update()
@@ -50,5 +46,6 @@ public class SpeedBuff : MonoBehaviour
         // then destroy this component
     }
 }
+*/
 
 
