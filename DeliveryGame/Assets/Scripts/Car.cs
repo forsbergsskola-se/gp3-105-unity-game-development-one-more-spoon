@@ -6,6 +6,7 @@ public class Car : MonoBehaviour
 {
     public GameObject cameraHolder;
     private Player player;
+    
     public int carHealth;
     public bool playerCanEnterCar = true;
     public Material burntMetalMaterial;
@@ -48,13 +49,19 @@ public class Car : MonoBehaviour
         {
             carHealth -= 10;
             Debug.Log("The object was hit with a bat. the health is: " + carHealth);
+
             if (carHealth <= 0)
             {
                 MeshRenderer sedanMaterial = this.gameObject.GetComponent<MeshRenderer>();
                 sedanMaterial.material = burntMetalMaterial;
-                fireEffect.SetActive(true);
                 explosionEffect.SetActive(true);
                 playerCanEnterCar = false;
+                FireEffectTimeout fireEffectTimeout = GetComponentInChildren<FireEffectTimeout>();
+                StartCoroutine(fireEffectTimeout.FireTimeOut());
+            }
+            if (carHealth <= 20)
+            {
+                fireEffect.SetActive(true);
             }
         }
     }
