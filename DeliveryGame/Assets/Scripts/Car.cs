@@ -8,8 +8,10 @@ public class Car : MonoBehaviour
     private Player player;
     public int carHealth;
     public bool playerCanEnterCar = true;
+    public Material burntMetalMaterial;
 
     public GameObject fireEffect;
+    public GameObject explosionEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,7 +50,10 @@ public class Car : MonoBehaviour
             Debug.Log("The object was hit with a bat. the health is: " + carHealth);
             if (carHealth <= 0)
             {
+                MeshRenderer sedanMaterial = this.gameObject.GetComponent<MeshRenderer>();
+                sedanMaterial.material = burntMetalMaterial;
                 fireEffect.SetActive(true);
+                explosionEffect.SetActive(true);
                 playerCanEnterCar = false;
             }
         }
