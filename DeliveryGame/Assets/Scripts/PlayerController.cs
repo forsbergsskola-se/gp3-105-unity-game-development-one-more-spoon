@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
     {
         animator = this.GetComponent<Animator>();
         car = FindFirstObjectByType<Car>();
+        
     }
 
     
@@ -80,7 +81,7 @@ public class PlayerController : MonoBehaviour
         // Move the player in the movement direction.
         MovePlayer(movementDirection);
         
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && car.playerCanEnterCar == true)
         {
             steveBody.SetActive(false);
             car.EnterCar();
@@ -89,6 +90,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G))
         {
             steveBody.SetActive(true);
+            this.gameObject.transform.position = GameObject.Find("SEDAN").transform.position + new Vector3(-2.5f, 0f, 0f);
             car.ExitCar();
         }
         
@@ -120,7 +122,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed)
         {
-            HitMeleeWeapon();
+            AttackWithMeleeWeapon();
         }
 
         else if (context.canceled)
@@ -186,11 +188,21 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    public void HitMeleeWeapon()
+    public void AttackWithMeleeWeapon()
     {
+        var player = FindFirstObjectByType<Player>();
+        player.meleeAttacking = true;
         animator.Play("MeleeAttack");
         Debug.Log("Hitting with melee weapon");
+        
     }
+
     
+    public void MeleeHit()
+    {
+        var player = FindFirstObjectByType<Player>();
+        player.meleeAttacking = false;
+        
+    }
     
 }
