@@ -19,10 +19,17 @@ public class PickUpHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && player.health < player.maxHealth)
         {
             Destroy(gameObject);
-            player.HealPlayer(50);
+            if (player.health + 50 > player.maxHealth)
+            {
+                player.HealPlayer(player.maxHealth - player.health);
+            }
+            else
+            {
+                player.HealPlayer(50);
+            }
         }
     }
 }
