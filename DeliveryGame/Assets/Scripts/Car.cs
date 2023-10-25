@@ -7,6 +7,9 @@ public class Car : MonoBehaviour
     public GameObject cameraHolder;
     private Player player;
     public int carHealth;
+    public bool playerCanEnterCar = true;
+
+    public GameObject fireEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +48,8 @@ public class Car : MonoBehaviour
             Debug.Log("The object was hit with a bat. the health is: " + carHealth);
             if (carHealth <= 0)
             {
-                Destroy(this.gameObject);
+                fireEffect.SetActive(true);
+                playerCanEnterCar = false;
             }
         }
     }

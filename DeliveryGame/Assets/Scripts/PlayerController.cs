@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
         // Move the player in the movement direction.
         MovePlayer(movementDirection);
         
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && car.playerCanEnterCar == true)
         {
             steveBody.SetActive(false);
             car.EnterCar();
