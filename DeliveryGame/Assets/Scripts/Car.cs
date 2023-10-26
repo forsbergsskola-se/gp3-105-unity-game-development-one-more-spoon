@@ -6,6 +6,7 @@ public class Car : MonoBehaviour
 {
     public GameObject cameraHolder;
     private Player player;
+    public bool playerIsInTheCar = false;
     
     public int carHealth;
     public bool playerCanEnterCar = true;

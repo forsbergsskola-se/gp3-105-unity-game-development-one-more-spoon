@@ -2155,6 +2155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 4
   rotationSpeed: 100
+  interactPressed: 0
   inventoryGUI: {fileID: 0}
   pauseMenu: {fileID: 0}
   steveBody: {fileID: 6792757378437941107}
@@ -3640,3 +3641,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletsLeft: 12
   clipSize: 12
+  isEquipped: 0
+  ammoText: {fileID: 0}

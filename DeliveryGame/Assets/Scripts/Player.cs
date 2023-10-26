@@ -21,7 +21,6 @@ public class Player : MonoBehaviour
     public TMP_Text scoreText;
     public TMP_Text cashText;
     
-    
     public GameObject wastedText;
     
     private void Start()

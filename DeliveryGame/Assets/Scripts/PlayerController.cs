@@ -14,9 +14,10 @@ public class PlayerController : MonoBehaviour
     
     public float rotationSpeed = 2;
     
-    bool interactPressed = false;
+    public bool interactPressed = false;
     bool inventoryToggled = false;
     bool isPaused = false;
+    bool gunIsShooting = false;
 
     public GameObject inventoryGUI;
     public GameObject pauseMenu;
@@ -96,10 +97,6 @@ public class PlayerController : MonoBehaviour
         
     }
      
-    
-
-   
-    
     public void Interact(InputAction.CallbackContext interactButtonPressed)
     {
         if (interactButtonPressed.performed)
@@ -119,7 +116,8 @@ public class PlayerController : MonoBehaviour
     {
         if (fireButtonPressed.performed)
         {
-            AttackWithMeleeWeapon();
+            // AttackWithMeleeWeapon();
+            FireGun();
         }
 
         else if (fireButtonPressed.canceled)
@@ -186,16 +184,41 @@ public class PlayerController : MonoBehaviour
 
     public void FireGun()
     {
-        
-        animator.Play("ShootingGun");
-        Debug.Log("Shooting With Gun");
+        Gun gun = GetComponentInChildren<Gun>();
+        if (!gunIsShooting && gun.ammoLeft > 0)
+        {
+            gunIsShooting = true;
+            gun.RemoveAmmo();
+            FireGunAnimation();
+        }
     }
 
+    public void FireGunAnimation()
+    {
+        animator.Play("ShootingGun");
+        // animator.SetBool("isFiring", true);
+    }
+
+    public void GunFireFinished()
+    {
+        // animator.SetBool("isFiring", false);
+        Debug.Log("Gun finished shooting");
+        gunIsShooting = false;
+    }
+    
     public void ReloadButton(InputAction.CallbackContext reloadButtonPressed)
     {
         if (reloadButtonPressed.performed)
         {
-            Debug.Log("Reloading gun."); 
+            Debug.Log("Reloading gun.");
+            Gun gun = GetComponentInChildren<Gun>();
+            gun.ReloadGun();
+            /*if (gun.isEquipped)
+            {
+                
+            }
+            */
+
         }
         
     }
