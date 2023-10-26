@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -81,12 +82,8 @@ public class PlayerController : MonoBehaviour
         // Move the player in the movement direction.
         MovePlayer(movementDirection);
         
-        if (Input.GetKeyDown(KeyCode.F) && car.playerCanEnterCar == true)
-        {
-            steveBody.SetActive(false);
-            car.EnterCar();
-        }
-
+        
+        
         if (Input.GetKeyDown(KeyCode.G))
         {
             steveBody.SetActive(true);
@@ -216,5 +213,20 @@ public class PlayerController : MonoBehaviour
         player.meleeAttacking = false;
         
     }
+
+    public void OnTriggerStay(Collider playerGettingInTheCar)
+    {
+        if (playerGettingInTheCar.CompareTag("Car"))
+        {
+            if (Input.GetKeyDown(KeyCode.F) && car.playerCanEnterCar == true)
+            { 
+                steveBody.SetActive(false);
+                car.EnterCar();  
+            }
+        }
+    }
+
+    
+        
     
 }

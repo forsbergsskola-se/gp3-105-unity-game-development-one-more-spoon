@@ -779,7 +779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca74a432dbd35d4785f22ce26853d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  copKillQuest: {fileID: 0}
+  flyerQuest: {fileID: 0}
 --- !u!1001 &934047549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1003,13 +1003,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: SEDAN
       objectReference: {fileID: 0}
-    - target: {fileID: 1797798677847232911, guid: a009a3cbf880377449c9d5b24f3da867, type: 3}
-      propertyPath: m_Mass
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4637087373703388287, guid: a009a3cbf880377449c9d5b24f3da867, type: 3}
-      propertyPath: m_SuspensionDistance
-      value: 0.5
+    - target: {fileID: 1085558424244099990, guid: a009a3cbf880377449c9d5b24f3da867, type: 3}
+      propertyPath: m_TagString
+      value: Car
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
