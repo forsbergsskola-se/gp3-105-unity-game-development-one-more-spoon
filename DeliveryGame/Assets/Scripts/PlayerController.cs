@@ -103,37 +103,37 @@ public class PlayerController : MonoBehaviour
     // ENABLE WHEEL CONTROLLER SCRIPT (SO THE PLAYER CAN MOVE THE CAR WITH INPUT)
     // CHANGE CAMERA SCRIPT PLAYER FIELD TO CAR (TO MAKE IT FOLLOW THE CAR)
     
-    public void Interact(InputAction.CallbackContext buttonPress)
+    public void Interact(InputAction.CallbackContext interactButtonPressed)
     {
-        if (buttonPress.performed)
+        if (interactButtonPressed.performed)
         {
             interactPressed = true;
             Debug.Log("Interact button Pressed");
         }
 
-        else if (buttonPress.canceled)
+        else if (interactButtonPressed.canceled)
         {
             interactPressed = false;
             Debug.Log("Interact button Released");
         }
     }
     
-    public void Fire(InputAction.CallbackContext context)
+    public void Fire(InputAction.CallbackContext fireButtonPressed)
     {
-        if (context.performed)
+        if (fireButtonPressed.performed)
         {
             AttackWithMeleeWeapon();
         }
 
-        else if (context.canceled)
+        else if (fireButtonPressed.canceled)
         {
             interactPressed = false;
         }
     }
     
-    public void Inventory(InputAction.CallbackContext context)
+    public void Inventory(InputAction.CallbackContext inventoryButtonPressed)
     {
-        if (context.performed)
+        if (inventoryButtonPressed.performed)
         {
             inventoryToggled = !inventoryToggled;
             if (inventoryToggled)
@@ -148,9 +148,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void Pause(InputAction.CallbackContext context)
+    public void Pause(InputAction.CallbackContext pauseButtonPressed)
     {
-        if (context.performed)
+        if (pauseButtonPressed.performed)
         {
             isPaused = !isPaused;
             if (isPaused)
@@ -178,13 +178,28 @@ public class PlayerController : MonoBehaviour
         animator.Play("Idle");
     }
 
+    public void SwitchWeapon(InputAction.CallbackContext switchWeaponButtonPressed)
+    {
+        if (switchWeaponButtonPressed.performed)
+        {
+            Debug.Log("Switching Weapons");
+            
+        }
+    }
+
     public void FireGun()
     {
         
+        animator.Play("ShootingGun");
+        Debug.Log("Shooting With Gun");
     }
 
-    public void ReloadGun()
+    public void ReloadButton(InputAction.CallbackContext reloadButtonPressed)
     {
+        if (reloadButtonPressed.performed)
+        {
+            Debug.Log("Reloading gun."); 
+        }
         
     }
 

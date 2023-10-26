@@ -2080,6 +2080,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 9336d7e9-a7aa-4fcd-bb4c-e0192eda7255
     m_ActionName: Player/Pause[/Keyboard/p,/Keyboard/pause,/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7687302324908429149}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: ReloadButton
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 408f1649-97ed-4cc3-8e29-5d987d74d86b
+    m_ActionName: Player/Reload[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7687302324908429149}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SwitchWeapon
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 81fb84e1-f7d9-454f-94cb-46cdb8de8d7c
+    m_ActionName: Player/SwitchWeapon[/Keyboard/q]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -2097,6 +2129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2fd5bca9d853f748b4621865ef1e13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   health: 100
   score: 0
   cash: 100
@@ -2996,6 +3029,7 @@ Transform:
   - {fileID: 3796134272759270725}
   - {fileID: 8779329976654642173}
   - {fileID: 1900555915133175863}
+  - {fileID: 1180370449895883015}
   m_Father: {fileID: 2851498233612428723}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8609470357762289588
@@ -3518,3 +3552,91 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1993228852070793570, guid: de35d2e40a1e89b4eada5d5990cc1507, type: 3}
   m_PrefabInstance: {fileID: 4784621750892915243}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8925874209417913854
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6142250834150849918}
+    m_Modifications:
+    - target: {fileID: 7757947126742549135, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
+      propertyPath: m_Name
+      value: M1911 Handgun_Silver
+      objectReference: {fileID: 0}
+    - target: {fileID: 7757947126742549135, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763809825007691001, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0164
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763809825007691001, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.095
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763809825007691001, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0362
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763809825007691001, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.704927
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763809825007691001, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.05547891
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763809825007691001, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.05547891
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763809825007691001, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.704927
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763809825007691001, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763809825007691001, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763809825007691001, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7757947126742549135, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8648729729076834542}
+  m_SourcePrefab: {fileID: 100100000, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
+--- !u!4 &1180370449895883015 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7763809825007691001, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
+  m_PrefabInstance: {fileID: 8925874209417913854}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1186364815768840049 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7757947126742549135, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
+  m_PrefabInstance: {fileID: 8925874209417913854}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8648729729076834542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186364815768840049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 765988a2f077a2f42a0804639b5061b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletsLeft: 12
+  clipSize: 12
