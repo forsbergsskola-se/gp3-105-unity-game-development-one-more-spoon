@@ -98,10 +98,7 @@ public class PlayerController : MonoBehaviour
      
     
 
-    // VOID ENTER CAR
-    // DISABLE STEVE GAME OBJECT (SO THE PLAYER "GOES INTO THE CAR")
-    // ENABLE WHEEL CONTROLLER SCRIPT (SO THE PLAYER CAN MOVE THE CAR WITH INPUT)
-    // CHANGE CAMERA SCRIPT PLAYER FIELD TO CAR (TO MAKE IT FOLLOW THE CAR)
+   
     
     public void Interact(InputAction.CallbackContext interactButtonPressed)
     {
