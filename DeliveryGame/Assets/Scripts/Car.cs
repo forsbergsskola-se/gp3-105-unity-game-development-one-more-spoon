@@ -66,6 +66,8 @@ public class Car : MonoBehaviour
             }
         }
     }
+     
+ 
 
      /*
     public void TakeDamage(int damage)

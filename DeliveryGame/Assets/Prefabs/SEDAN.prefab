@@ -285,7 +285,7 @@ WheelCollider:
     spring: 35000
     damper: 4500
     targetPosition: 0.5
-  m_SuspensionDistance: 0.6
+  m_SuspensionDistance: 0.5
   m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -612,6 +612,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 14146409-635b-46d6-8ad1-e8e05ac7c149
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 408f1649-97ed-4cc3-8e29-5d987d74d86b
+    m_ActionName: Player/Reload[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 81fb84e1-f7d9-454f-94cb-46cdb8de8d7c
+    m_ActionName: Player/SwitchWeapon[/Keyboard/q]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -663,8 +671,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3259106, y: 1.6436584, z: 6.2651687}
-  m_Center: {x: -1.3367874e-17, y: 1.0882709, z: 0.00094068074}
+  m_Size: {x: 5.46, y: 1.6436583, z: 6.265169}
+  m_Center: {x: -0.17408286, y: 1.0882709, z: 0.0009406239}
 --- !u!114 &2518396643358754207
 MonoBehaviour:
   m_ObjectHideFlags: 0
