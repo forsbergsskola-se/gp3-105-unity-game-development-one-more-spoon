@@ -1,8 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,13 +17,24 @@ public class PlayerController : MonoBehaviour
     
     public float rotationSpeed = 2;
     
-    bool interactPressed = false;
+    public bool interactPressed = false;
     bool inventoryToggled = false;
     bool isPaused = false;
+    bool gunIsShooting = false;
 
     public GameObject inventoryGUI;
     public GameObject pauseMenu;
     private Car car;
+    private Weapon mainHand;
+    private Weapon offHand;
+    private bool gunIsEquipped = true;
+    public GameObject gunMeshHolder;
+    public GameObject batMeshHolder;
+    public RawImage mainHandImage;
+    public RawImage offHandImage;
+    public Texture gunTexture;
+    public Texture batTexture;
+    //
     
     public GameObject steveBody;
     
@@ -72,7 +86,14 @@ public class PlayerController : MonoBehaviour
     {
         animator = this.GetComponent<Animator>();
         car = FindFirstObjectByType<Car>();
-        
+        mainHand = new Weapon(GetComponentInChildren<Gun>(), null);
+        offHand = new Weapon(null, GetComponentInChildren<Bat>());
+        Debug.Log(mainHand);
+        Debug.Log(mainHand.gun);
+        Debug.Log(mainHand.bat);
+        Debug.Log(offHand);
+        Debug.Log(offHand.bat);
+        Debug.Log(offHand.gun);
     }
 
     
@@ -81,12 +102,8 @@ public class PlayerController : MonoBehaviour
         // Move the player in the movement direction.
         MovePlayer(movementDirection);
         
-        if (Input.GetKeyDown(KeyCode.F) && car.playerCanEnterCar == true)
-        {
-            steveBody.SetActive(false);
-            car.EnterCar();
-        }
-
+        
+        
         if (Input.GetKeyDown(KeyCode.G))
         {
             steveBody.SetActive(true);
@@ -96,13 +113,6 @@ public class PlayerController : MonoBehaviour
         
     }
      
-    
-
-    // VOID ENTER CAR
-    // DISABLE STEVE GAME OBJECT (SO THE PLAYER "GOES INTO THE CAR")
-    // ENABLE WHEEL CONTROLLER SCRIPT (SO THE PLAYER CAN MOVE THE CAR WITH INPUT)
-    // CHANGE CAMERA SCRIPT PLAYER FIELD TO CAR (TO MAKE IT FOLLOW THE CAR)
-    
     public void Interact(InputAction.CallbackContext interactButtonPressed)
     {
         if (interactButtonPressed.performed)
@@ -122,7 +132,22 @@ public class PlayerController : MonoBehaviour
     {
         if (fireButtonPressed.performed)
         {
-            AttackWithMeleeWeapon();
+            var player = FindFirstObjectByType<Player>();
+            if (gunIsShooting == false && player.meleeAttacking == false )
+            {
+                
+            
+            if (mainHand.gun != null)
+            {
+                FireGun();
+            }
+
+            if (mainHand.bat != null)
+            {
+                AttackWithMeleeWeapon();
+            }
+            }
+            
         }
 
         else if (fireButtonPressed.canceled)
@@ -178,37 +203,58 @@ public class PlayerController : MonoBehaviour
         animator.Play("Idle");
     }
 
-    public void SwitchWeapon(InputAction.CallbackContext switchWeaponButtonPressed)
-    {
-        if (switchWeaponButtonPressed.performed)
-        {
-            Debug.Log("Switching Weapons");
-            
-        }
-    }
+
 
     public void FireGun()
     {
         
-        animator.Play("ShootingGun");
-        Debug.Log("Shooting With Gun");
+        if (!gunIsShooting && mainHand.gun != null && mainHand.gun.ammoLeft > 0)
+        {
+            gunIsShooting = true;
+            mainHand.gun.RemoveAmmo();
+            FireGunAnimation();
+        }
     }
 
+    public void FireGunAnimation()
+    {
+        animator.Play("ShootingGun");
+        // animator.SetBool("isFiring", true);
+    }
+
+    public void GunFireFinished()
+    {
+        // animator.SetBool("isFiring", false);
+        Debug.Log("Gun finished shooting");
+        gunIsShooting = false;
+    }
+    
     public void ReloadButton(InputAction.CallbackContext reloadButtonPressed)
     {
         if (reloadButtonPressed.performed)
         {
-            Debug.Log("Reloading gun."); 
+            Debug.Log("Reloading gun.");
+            Gun gun = GetComponentInChildren<Gun>();
+            gun.ReloadGun();
+            /*if (gun.isEquipped)
+            {
+                
+            }
+            */
+
         }
         
     }
 
     public void AttackWithMeleeWeapon()
     {
+        if (mainHand.bat != null)
+        {
         var player = FindFirstObjectByType<Player>();
         player.meleeAttacking = true;
         animator.Play("MeleeAttack");
         Debug.Log("Hitting with melee weapon");
+        }
         
     }
 
@@ -219,5 +265,60 @@ public class PlayerController : MonoBehaviour
         player.meleeAttacking = false;
         
     }
+
+    public void OnTriggerStay(Collider playerGettingInTheCar)
+    {
+        if (playerGettingInTheCar.CompareTag("Car"))
+        {
+            Debug.Log("Inside of the car box collider");
+            if (Input.GetKeyDown(KeyCode.F) && car.playerCanEnterCar == true)
+            { 
+                steveBody.SetActive(false);
+                car.EnterCar();  
+            }
+        }
+    }
+
+    public void SwitchWeapon(InputAction.CallbackContext switchWeaponButtonPressed)
+    {
+        if (switchWeaponButtonPressed.performed)
+        {
+            Debug.Log("Switching Weapons");
+            gunIsEquipped = !gunIsEquipped;
+            var temp = mainHand;
+            mainHand = offHand;
+            offHand = temp;
+            Debug.Log(mainHand.bat);
+            Debug.Log(mainHand.gun);
+            if (gunIsEquipped)
+            {
+                gunMeshHolder.SetActive(true);
+                batMeshHolder.SetActive(false);
+                mainHandImage.texture = gunTexture;
+                offHandImage.texture = batTexture;
+                
+
+            }
+            else
+            {
+                gunMeshHolder.SetActive(false);
+                batMeshHolder.SetActive(true);
+                mainHandImage.texture = batTexture;
+                offHandImage.texture = gunTexture;
+                
+            }
+        }
+    }
+    
+    public void MainHand()
+    {
+        
+    }
+    
+    public void OffHand()
+    {
+        
+    }
+        
     
 }

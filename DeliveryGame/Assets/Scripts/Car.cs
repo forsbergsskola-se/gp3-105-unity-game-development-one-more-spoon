@@ -6,6 +6,7 @@ public class Car : MonoBehaviour
 {
     public GameObject cameraHolder;
     private Player player;
+    public bool playerIsInTheCar = false;
     
     public int carHealth;
     public bool playerCanEnterCar = true;
@@ -13,6 +14,9 @@ public class Car : MonoBehaviour
 
     public GameObject fireEffect;
     public GameObject explosionEffect;
+
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +69,8 @@ public class Car : MonoBehaviour
             }
         }
     }
+     
+ 
 
      /*
     public void TakeDamage(int damage)
