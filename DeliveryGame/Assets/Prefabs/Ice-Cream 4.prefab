@@ -4920,15 +4920,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3ad19b821b60a90409f99255b1365f7c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.963339
+      value: 24.825033
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3ad19b821b60a90409f99255b1365f7c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.300134
+      value: 11.326811
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3ad19b821b60a90409f99255b1365f7c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.092688
+      value: -18.664545
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3ad19b821b60a90409f99255b1365f7c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5008,6 +5008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a56aed0bebf84d88b4734301287b4d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  icecreamImage: {fileID: 0}
 --- !u!65 &6670218414080147905
 BoxCollider:
   m_ObjectHideFlags: 0

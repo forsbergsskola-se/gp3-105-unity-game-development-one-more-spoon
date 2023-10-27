@@ -11,11 +11,9 @@ public class AddItem : MonoBehaviour
     public TMP_Text countLabel;
     public void AddToInventory()
     {
-        {
             count++;
             gameObject.SetActive(true);
             countLabel.text = count.ToString();
-        }
     }
 
     public void Addname()

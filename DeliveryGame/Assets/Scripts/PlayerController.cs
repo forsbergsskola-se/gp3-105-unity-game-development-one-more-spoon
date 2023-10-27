@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
     public RawImage offHandImage;
     public Texture gunTexture;
     public Texture batTexture;
+    public RawImage invweapon1;
+    public RawImage invweapon2;
     //
     
     public GameObject steveBody;
@@ -296,7 +298,8 @@ public class PlayerController : MonoBehaviour
                 batMeshHolder.SetActive(false);
                 mainHandImage.texture = gunTexture;
                 offHandImage.texture = batTexture;
-                
+                invweapon1.texture = gunTexture;
+                invweapon2.texture = batTexture;
 
             }
             else
@@ -305,6 +308,8 @@ public class PlayerController : MonoBehaviour
                 batMeshHolder.SetActive(true);
                 mainHandImage.texture = batTexture;
                 offHandImage.texture = gunTexture;
+                invweapon1.texture = batTexture;
+                invweapon2.texture = gunTexture;
                 
             }
         }

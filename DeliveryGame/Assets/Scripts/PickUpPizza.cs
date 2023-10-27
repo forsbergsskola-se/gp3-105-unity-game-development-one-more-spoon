@@ -6,11 +6,11 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class PickUpFlyer : MonoBehaviour
+public class PickUpPizza : MonoBehaviour
 {
     private Player player;
-    public AddItem flyerImage;
-    public AddItem flyername;
+    public AddItem pizzaImage;
+    public AddItem pizzaname;
     private void Start()
     {
         player = FindFirstObjectByType<Player>();
@@ -21,8 +21,8 @@ public class PickUpFlyer : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Destroy(gameObject);
-            flyerImage.AddToInventory();
-            flyername.Addname();
+            pizzaImage.AddToInventory();
+            pizzaname.Addname();
         }
     }
 }

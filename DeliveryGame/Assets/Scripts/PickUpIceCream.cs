@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class PickUpIceCream : MonoBehaviour
 {
+    public AddItem icecreamName;
     public AddItem icecreamImage;
     private Player player;
     static int Icecreams = 1;
@@ -32,6 +33,7 @@ public class PickUpIceCream : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Destroy(gameObject);
+            icecreamName.Addname();
             icecreamImage.AddToInventory();
             player.AddScore(10 * Icecreams);
             Icecreams++;
