@@ -270,6 +270,7 @@ public class PlayerController : MonoBehaviour
     {
         if (playerGettingInTheCar.CompareTag("Car"))
         {
+            Debug.Log("Inside of the car box collider");
             if (Input.GetKeyDown(KeyCode.F) && car.playerCanEnterCar == true)
             { 
                 steveBody.SetActive(false);
