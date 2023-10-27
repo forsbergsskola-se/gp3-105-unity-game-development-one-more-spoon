@@ -9,7 +9,7 @@ public class DanielsCarMovementScript : MonoBehaviour
     
     // CAR MASS in unity should be set to 1000.
     public float movementSpeed = 35000;
-
+   
     public float rotationSpeed = 10000;
 
     private Rigidbody carRigidbody;
@@ -37,7 +37,7 @@ public class DanielsCarMovementScript : MonoBehaviour
         float forwardForce = direction.y * movementSpeed;
         
         carRigidbody.AddForce(transform.forward * forwardForce);
-        
+       
         float RotationMovement = direction.x * rotationSpeed;
         
         carRigidbody.AddTorque(Vector3.up * RotationMovement);

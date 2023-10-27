@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1468,13 +1468,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: SEDAN
       objectReference: {fileID: 0}
-    - target: {fileID: 1797798677847232911, guid: a009a3cbf880377449c9d5b24f3da867, type: 3}
-      propertyPath: m_Mass
-      value: 1000
+    - target: {fileID: 2780325220130246885, guid: a009a3cbf880377449c9d5b24f3da867, type: 3}
+      propertyPath: movementSpeed
+      value: 30000
       objectReference: {fileID: 0}
-    - target: {fileID: 4637087373703388287, guid: a009a3cbf880377449c9d5b24f3da867, type: 3}
-      propertyPath: m_SuspensionDistance
-      value: 0.5
+    - target: {fileID: 2780325220130246885, guid: a009a3cbf880377449c9d5b24f3da867, type: 3}
+      propertyPath: rotationSpeed
+      value: 15000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
