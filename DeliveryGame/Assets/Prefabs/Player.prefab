@@ -2573,6 +2573,12 @@ MonoBehaviour:
   interactPressed: 0
   inventoryGUI: {fileID: 0}
   pauseMenu: {fileID: 0}
+  gunMeshHolder: {fileID: 7150261024722405544}
+  batMeshHolder: {fileID: 4566299023310148722}
+  mainHandImage: {fileID: 0}
+  offHandImage: {fileID: 0}
+  gunTexture: {fileID: 2800000, guid: d2084b8ece52fe646bd3afca8d8fac42, type: 3}
+  batTexture: {fileID: 2800000, guid: cd9a8a1de3a3efa4eb27d1eb399252b2, type: 3}
   steveBody: {fileID: 6792757378437941107}
 --- !u!1 &6792757378437941107
 GameObject:
@@ -4226,6 +4232,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f14e429421499447b1758a424c48896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &4566299023310148722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2679956868174629735, guid: b2c2eaa77adbe704690e52a50768f2a8, type: 3}
+  m_PrefabInstance: {fileID: 1904985628927827733}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4784621750892915243
 PrefabInstance:
   m_ObjectHideFlags: 0

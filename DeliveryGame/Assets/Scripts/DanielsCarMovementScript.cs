@@ -24,6 +24,7 @@ public class DanielsCarMovementScript : MonoBehaviour
     void Update()
     {
         MoveCar(movementDirection);
+        Debug.Log(carRigidbody.velocity);
     }
     
     public void OnCarMovement(InputAction.CallbackContext buttonPressed)

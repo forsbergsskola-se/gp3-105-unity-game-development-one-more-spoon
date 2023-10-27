@@ -14,6 +14,9 @@ public class Car : MonoBehaviour
 
     public GameObject fireEffect;
     public GameObject explosionEffect;
+
+
+    
     // Start is called before the first frame update
     void Start()
     {
