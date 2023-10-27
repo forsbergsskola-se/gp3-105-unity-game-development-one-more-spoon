@@ -2382,34 +2382,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1180370449895883015, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.5376882
-      objectReference: {fileID: 0}
-    - target: {fileID: 1180370449895883015, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.5376882
-      objectReference: {fileID: 0}
-    - target: {fileID: 1180370449895883015, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.45922917
-      objectReference: {fileID: 0}
-    - target: {fileID: 1180370449895883015, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.45922917
-      objectReference: {fileID: 0}
-    - target: {fileID: 1180370449895883015, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1186364815768840049, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1903849738908354171, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2286923915162251861, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
       propertyPath: cashText
       value: 
@@ -2478,11 +2450,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8648729729076834542, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
+    - target: {fileID: 8974616668912101055, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 584650505}
-    - target: {fileID: 8648729729076834542, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
+    - target: {fileID: 8974616668912101055, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
       propertyPath: ammoStoredText
       value: 
       objectReference: {fileID: 736203912}

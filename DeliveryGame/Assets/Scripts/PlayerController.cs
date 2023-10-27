@@ -23,6 +23,11 @@ public class PlayerController : MonoBehaviour
     public GameObject inventoryGUI;
     public GameObject pauseMenu;
     private Car car;
+    private Weapon mainHand;
+    private Weapon offHand;
+    
+    
+    
     
     public GameObject steveBody;
     
@@ -74,7 +79,14 @@ public class PlayerController : MonoBehaviour
     {
         animator = this.GetComponent<Animator>();
         car = FindFirstObjectByType<Car>();
-        
+        mainHand = new Weapon(GetComponentInChildren<Gun>(), null);
+        offHand = new Weapon(null, GetComponentInChildren<Bat>());
+        Debug.Log(mainHand);
+        Debug.Log(mainHand.gun);
+        Debug.Log(mainHand.bat);
+        Debug.Log(offHand);
+        Debug.Log(offHand.bat);
+        Debug.Log(offHand.gun);
     }
 
     
@@ -113,8 +125,22 @@ public class PlayerController : MonoBehaviour
     {
         if (fireButtonPressed.performed)
         {
-            // AttackWithMeleeWeapon();
-            FireGun();
+            var player = FindFirstObjectByType<Player>();
+            if (gunIsShooting == false && player.meleeAttacking == false )
+            {
+                
+            
+            if (mainHand.gun != null)
+            {
+                FireGun();
+            }
+
+            if (mainHand.bat != null)
+            {
+                AttackWithMeleeWeapon();
+            }
+            }
+            
         }
 
         else if (fireButtonPressed.canceled)
@@ -170,22 +196,15 @@ public class PlayerController : MonoBehaviour
         animator.Play("Idle");
     }
 
-    public void SwitchWeapon(InputAction.CallbackContext switchWeaponButtonPressed)
-    {
-        if (switchWeaponButtonPressed.performed)
-        {
-            Debug.Log("Switching Weapons");
-            
-        }
-    }
+
 
     public void FireGun()
     {
-        Gun gun = GetComponentInChildren<Gun>();
-        if (!gunIsShooting && gun.ammoLeft > 0)
+        
+        if (!gunIsShooting && mainHand.gun != null && mainHand.gun.ammoLeft > 0)
         {
             gunIsShooting = true;
-            gun.RemoveAmmo();
+            mainHand.gun.RemoveAmmo();
             FireGunAnimation();
         }
     }
@@ -222,10 +241,13 @@ public class PlayerController : MonoBehaviour
 
     public void AttackWithMeleeWeapon()
     {
+        if (mainHand.bat != null)
+        {
         var player = FindFirstObjectByType<Player>();
         player.meleeAttacking = true;
         animator.Play("MeleeAttack");
         Debug.Log("Hitting with melee weapon");
+        }
         
     }
 
@@ -249,7 +271,31 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void SwitchWeapon(InputAction.CallbackContext switchWeaponButtonPressed)
+    {
+        if (switchWeaponButtonPressed.performed)
+        {
+            Debug.Log("Switching Weapons");
+            var temp = mainHand;
+            mainHand = offHand;
+            offHand = temp;
+
+            if (mainHand.bat != null)
+            {
+                
+            }
+        }
+    }
     
+    public void MainHand()
+    {
+        
+    }
+    
+    public void OffHand()
+    {
+        
+    }
         
     
 }
