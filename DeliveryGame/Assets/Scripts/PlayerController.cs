@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -25,9 +27,14 @@ public class PlayerController : MonoBehaviour
     private Car car;
     private Weapon mainHand;
     private Weapon offHand;
-    
-    
-    
+    private bool gunIsEquipped = true;
+    public GameObject gunMeshHolder;
+    public GameObject batMeshHolder;
+    public RawImage mainHandImage;
+    public RawImage offHandImage;
+    public Texture gunTexture;
+    public Texture batTexture;
+    //
     
     public GameObject steveBody;
     
@@ -276,12 +283,27 @@ public class PlayerController : MonoBehaviour
         if (switchWeaponButtonPressed.performed)
         {
             Debug.Log("Switching Weapons");
+            gunIsEquipped = !gunIsEquipped;
             var temp = mainHand;
             mainHand = offHand;
             offHand = temp;
-
-            if (mainHand.bat != null)
+            Debug.Log(mainHand.bat);
+            Debug.Log(mainHand.gun);
+            if (gunIsEquipped)
             {
+                gunMeshHolder.SetActive(true);
+                batMeshHolder.SetActive(false);
+                mainHandImage.texture = gunTexture;
+                offHandImage.texture = batTexture;
+                
+
+            }
+            else
+            {
+                gunMeshHolder.SetActive(false);
+                batMeshHolder.SetActive(true);
+                mainHandImage.texture = batTexture;
+                offHandImage.texture = gunTexture;
                 
             }
         }

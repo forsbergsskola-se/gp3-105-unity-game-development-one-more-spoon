@@ -12,6 +12,7 @@ public class Gun : MonoBehaviour
     public TMP_Text ammoText;
     public TMP_Text ammoStoredText;
     
+    
     void Start()
     {
         
