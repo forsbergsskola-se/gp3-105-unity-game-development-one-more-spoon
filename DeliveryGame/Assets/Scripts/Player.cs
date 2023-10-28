@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Net.Mime;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class Player : MonoBehaviour
 {
@@ -11,6 +13,10 @@ public class Player : MonoBehaviour
     public int health = 100;
     public int score = 0;
     public int cash = 100;
+    public static int moneySaved = 100;
+    public static int ammoSaved = 100;
+    //public static bool playerDied = false;
+    
     public bool isDying = false;
     public bool meleeAttacking = false;
     
@@ -27,6 +33,8 @@ public class Player : MonoBehaviour
     {
         startingPosition = this.transform.position;
         startingRotation = this.transform.rotation.eulerAngles;
+        TransferMoneyAndAmmoBackToPlayerAfterRestart();
+
 
     }
 
@@ -73,6 +81,20 @@ public class Player : MonoBehaviour
         cash = cash / 2;
     }
 
+    public void TransferMoneyAndAmmoBackToPlayerAfterRestart()
+    {
+        Gun gun = GetComponentInChildren<Gun>();
+        cash = moneySaved;
+        gun.ammoStored = ammoSaved;
+    }
+
+    public void RestartGameOnDeath()
+    {
+        Gun gun = GetComponentInChildren<Gun>();
+        moneySaved = cash;
+        ammoSaved = gun.ammoStored;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     public void Respawn()
     {
         
@@ -117,7 +139,8 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(3);
             HideWastedText();
             RemoveCashOnDeath();
-            Respawn();
+            RestartGameOnDeath();
+            //Respawn();
     }
     
     

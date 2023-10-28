@@ -24,7 +24,8 @@ public class SmokeInstantDeath : MonoBehaviour
             yield return new WaitForSeconds(3);
             player.HideWastedText();
             player.RemoveCashOnDeath();
-            player.Respawn();
+            player.RestartGameOnDeath();
+            //player.Respawn();
         }
         
         
