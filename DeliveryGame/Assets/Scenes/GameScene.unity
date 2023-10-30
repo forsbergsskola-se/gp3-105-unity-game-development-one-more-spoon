@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -236,38 +236,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &213545414 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 21f8e70d2c923a94c9fbfe12c028c920, type: 3}
-  m_PrefabInstance: {fileID: 1210220120}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &213545415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 213545414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49e098788c40c430b91b1bdfeb293dc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 784142076}
-        m_TargetAssemblyTypeName: CopKillQuest, Assembly-CSharp
-        m_MethodName: OnCopKilled
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &223067186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -826,10 +794,6 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 18
       objectReference: {fileID: 0}
-    - target: {fileID: 8217551801503150481, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8873935095283731818, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
       propertyPath: m_Name
       value: InventoryCanvas
@@ -926,10 +890,6 @@ PrefabInstance:
     - target: {fileID: 1264270872571437975, guid: 52aadd76a13c3a543a3b0bdc127bfdb4, type: 3}
       propertyPath: m_Name
       value: InGameGUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 1264270872571437975, guid: 52aadd76a13c3a543a3b0bdc127bfdb4, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5447935376583806795, guid: 52aadd76a13c3a543a3b0bdc127bfdb4, type: 3}
       propertyPath: m_Name
@@ -1319,6 +1279,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isAccepted: 0
+  isCompleted: 0
   questLable: {fileID: 1662500711}
   player: {fileID: 1807379097}
   music: {fileID: 0}
@@ -2034,66 +1996,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
---- !u!1001 &1210220120
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 21f8e70d2c923a94c9fbfe12c028c920, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.99
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 21f8e70d2c923a94c9fbfe12c028c920, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 11.25
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 21f8e70d2c923a94c9fbfe12c028c920, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 21f8e70d2c923a94c9fbfe12c028c920, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 21f8e70d2c923a94c9fbfe12c028c920, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 21f8e70d2c923a94c9fbfe12c028c920, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 21f8e70d2c923a94c9fbfe12c028c920, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 21f8e70d2c923a94c9fbfe12c028c920, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 21f8e70d2c923a94c9fbfe12c028c920, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 21f8e70d2c923a94c9fbfe12c028c920, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 21f8e70d2c923a94c9fbfe12c028c920, type: 3}
-      propertyPath: m_Name
-      value: PoliceOfficer (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 21f8e70d2c923a94c9fbfe12c028c920, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 213545415}
-  m_SourcePrefab: {fileID: 100100000, guid: 21f8e70d2c923a94c9fbfe12c028c920, type: 3}
 --- !u!1 &1283313068 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7788905043246864155, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
@@ -3519,6 +3421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e098788c40c430b91b1bdfeb293dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
   OnDeath:
     m_PersistentCalls:
       m_Calls:
@@ -3909,6 +3812,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6185531339891824108, guid: f0613bf2306c80440ad3fcb9ea0ca562, type: 3}
+      propertyPath: m_text
+      value: 'Hey!
+
+        Can you help me kill the cop that is corrupted?! You
+        will get 200USD! Money and killing cops! Good deal right?!'
+      objectReference: {fileID: 0}
     - target: {fileID: 7476153403554514735, guid: f0613bf2306c80440ad3fcb9ea0ca562, type: 3}
       propertyPath: m_Name
       value: CopKillCanvas
@@ -3969,10 +3879,6 @@ PrefabInstance:
     - target: {fileID: 6906789977966408280, guid: e72e2d3201d25415da9a7ccdcbb8ac07, type: 3}
       propertyPath: m_Name
       value: EventSystem
-      objectReference: {fileID: 0}
-    - target: {fileID: 6906789977966408280, guid: e72e2d3201d25415da9a7ccdcbb8ac07, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4185,7 +4091,6 @@ SceneRoots:
   - {fileID: 887523832}
   - {fileID: 2264887782458937755}
   - {fileID: 492822433}
-  - {fileID: 1210220120}
   - {fileID: 1308385844}
   - {fileID: 21380320}
   - {fileID: 1079388277}
