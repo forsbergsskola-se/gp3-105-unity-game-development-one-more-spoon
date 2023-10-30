@@ -239,6 +239,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Reloading gun.");
             Gun gun = GetComponentInChildren<Gun>();
             gun.ReloadGun();
+            animator.Play("Reloading");
             /*if (gun.isEquipped)
             {
                 
