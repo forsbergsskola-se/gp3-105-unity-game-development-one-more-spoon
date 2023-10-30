@@ -6,11 +6,6 @@ using UnityEngine;
 
 public class PickUpMoney : MonoBehaviour
 {
-    private Player player;
-    private void Start()
-    {
-        player = FindFirstObjectByType<Player>();
-    }
 
     private void FixedUpdate()
     {
@@ -19,7 +14,8 @@ public class PickUpMoney : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        Player player = other.GetComponent<Player>();
+        if (player != null)
         {
             Destroy(gameObject);
             player.AddCash(10);

@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
     
     public Texture gunTexture;
     public Texture batTexture;
+    public Texture gunTexture2;
+    public Texture batTexture2;
     
     public GameObject steveBody;
     
@@ -310,13 +312,14 @@ public class PlayerController : MonoBehaviour
             {
                 gunMeshHolder.SetActive(false);
                 batMeshHolder.SetActive(true);
-                mainHandImage.texture = batTexture;
-                mainHandImageInventory.texture = batTexture;
                 
-                offHandImage.texture = gunTexture;
-                offHandImageInventory.texture = gunTexture;
+                mainHandImage.texture = batTexture2;
+                mainHandImageInventory.texture = batTexture2;
+                
+                offHandImage.texture = gunTexture2;
+                offHandImageInventory.texture = gunTexture2;
 
-                
+                //Remove the 2 to go back to Daniels version.
             }
         }
     }

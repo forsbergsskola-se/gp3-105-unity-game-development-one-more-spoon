@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class QuestGiverScript : MonoBehaviour
+public class SavePoint : MonoBehaviour
 {
   
   
@@ -15,9 +15,9 @@ public class QuestGiverScript : MonoBehaviour
     
   }
   
-  public void OnTriggerStay(Collider thingThatIsInsideTheCollider)
+  public void OnTriggerEnter(Collider thingThatIsInsideTheCollider)
   {
-    if (Input.GetKeyDown(KeyCode.E) && thingThatIsInsideTheCollider.CompareTag("Player"))
+    if (thingThatIsInsideTheCollider.CompareTag("Player"))
     {
       questCanvas.SetActive(true);
     }

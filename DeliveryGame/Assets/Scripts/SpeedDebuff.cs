@@ -15,7 +15,7 @@ public class SpeedDebuff : MonoBehaviour
     private void Start()
     {
         playerController = GetComponent<PlayerController>();
-        carScript = GetComponent<DanielsCarMovementScript>();
+        carScript = GetComponentInParent<DanielsCarMovementScript>();
         if (playerController != null)
         {
             playerController.movementSpeed = 2;
@@ -23,7 +23,7 @@ public class SpeedDebuff : MonoBehaviour
         }
         else
         {
-            carScript.movementSpeed = 25000;
+            carScript.movementSpeed = 15000;
         }
         
         timeBuffRemaining = 5;
@@ -33,9 +33,15 @@ public class SpeedDebuff : MonoBehaviour
 
     private void OnDestroy()
     {
-        // remove the benefit from movement*
-        playerController.movementSpeed = 4;
-        carScript.movementSpeed = 35000;
+        
+        if (playerController != null)
+        {
+            playerController.movementSpeed = 4;
+        }
+        else
+        {
+            carScript.movementSpeed = 35000;
+        }
     }
 
     private void Update()
