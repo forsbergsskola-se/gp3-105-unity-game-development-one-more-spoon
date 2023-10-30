@@ -131,7 +131,7 @@ public class Player : MonoBehaviour
 
     }
 
-    IEnumerator CheckHealth()
+   public IEnumerator CheckHealth()
     {
             isDying = true;
             ShowWastedText();
