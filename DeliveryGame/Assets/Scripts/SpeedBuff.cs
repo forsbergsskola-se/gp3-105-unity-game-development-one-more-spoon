@@ -8,14 +8,14 @@ public class SpeedBuff : MonoBehaviour
 {
     private PlayerController playerController;
 
-    private DanielsCarMovementScript carScript;
+    private CarMovementScript carScript;
 
     public float timeBuffRemaining;
     // add a remainingTimeField: *
     private void Start()
     {
         playerController = GetComponent<PlayerController>();
-        carScript = GetComponent<DanielsCarMovementScript>();
+        carScript = GetComponent<CarMovementScript>();
         if (playerController != null)
         {
             playerController.movementSpeed = 9;

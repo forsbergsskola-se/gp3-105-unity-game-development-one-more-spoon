@@ -13,7 +13,8 @@ public class CopKillQuest : MonoBehaviour
    public UnityEvent CopsKilledChangeEvent;
    // false, true (2)
 
-   private bool isAccepted;
+   public bool isAccepted;
+   public bool isCompleted = false;
    private int copsKilled;
    public TMP_Text questLable;
    public Player player;
@@ -30,7 +31,7 @@ public class CopKillQuest : MonoBehaviour
       
       if (isAccepted)
       {
-         questLable.text = $"{copsKilled} /2 Cops";
+         questLable.text = $"{copsKilled} /1 Cops";
       }
 
       if (!isAccepted)
@@ -50,13 +51,18 @@ public class CopKillQuest : MonoBehaviour
    public void OnCopKilled()
    {
       if (!this.isAccepted) return;
-      if (this.copsKilled >= 2) return;
-
+      if (this.copsKilled >= 1) return;
+      
       this.copsKilled++;
+      if (copsKilled == 1)
+      {
+         isCompleted = true;
+      }
       this.CopsKilledChangeEvent.Invoke();
       
       //this.OnCopsKilledChanged.Invoke(); ??
    }
+
 }
 
           

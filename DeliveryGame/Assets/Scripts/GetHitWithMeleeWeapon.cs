@@ -13,7 +13,7 @@ public class GetHitWithMeleeWeapon : MonoBehaviour
 
     private void OnCollisionEnter(Collision hitWithMeleeWeapon)
     {
-        if (hitWithMeleeWeapon.gameObject.CompareTag("Bat"))
+        if (hitWithMeleeWeapon.gameObject.CompareTag("Bat") )
         {
             health -= 1;
             Debug.Log("The object was hit with a bat. the health is: " + health);
@@ -22,6 +22,8 @@ public class GetHitWithMeleeWeapon : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
+
+        
     }
     
 }
