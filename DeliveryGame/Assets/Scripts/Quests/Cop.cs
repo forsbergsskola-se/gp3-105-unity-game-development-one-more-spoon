@@ -3,23 +3,58 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class Cop : MonoBehaviour
 
 {
-    public int health = 100;
+    private Player player;
+    public int policeHealth = 100;
     public UnityEvent OnDeath;
+    public Animator policeAnimator;
     
-    public void copDead()
+
+
+    private void Start()
     {
-        this.OnDeath.Invoke();
+        player = FindFirstObjectByType<Player>();
+        policeAnimator = this.GetComponent<Animator>();
     }
 
     private void Update()
     {
-        if (health<=0)
+        if (policeHealth<=0)
         {
             copDead();
         }
     }
+    
+    private void OnCollisionEnter(Collision hitWithMeleeWeapon)
+    {
+        if (hitWithMeleeWeapon.gameObject.CompareTag("Bat") && player.meleeAttacking)
+        {
+            policeHealth -= 25;
+            Debug.Log("The Police was hit with a bat. the health is: " + policeHealth);
+
+            if (policeHealth <= 0)
+            {
+                copDead();
+            }
+        }
+
+    }
+    public void copDead()
+    {
+        policeAnimator.Play("CopDeath");
+        this.OnDeath.Invoke();
+        StartCoroutine(DespawnCop());
+    }
+
+    public IEnumerator DespawnCop()
+    {
+        yield return new WaitForSeconds(10f);
+        this.gameObject.SetActive(false);
+    }
 }
+
+
