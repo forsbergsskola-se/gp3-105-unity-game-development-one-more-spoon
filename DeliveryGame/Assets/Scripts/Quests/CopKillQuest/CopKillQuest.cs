@@ -10,7 +10,7 @@ public class CopKillQuest : MonoBehaviour
 {
    public UnityEvent onQuestStarted;
 
-   public UnityEvent CopsKilledChangeEvent;
+   public UnityEvent<int> CopsKilledChangeEvent;
    // false, true (2)
 
    public bool isAccepted;
@@ -20,25 +20,19 @@ public class CopKillQuest : MonoBehaviour
    public Player player;
    public AudioSource music;
    public Slider healthbar;
+   public TMP_Text completedLable;
    
 
    public void Update()
    {
-      if (isAccepted)
-      {
-         Debug.Log("Raise event");
-      }
-      
-      if (isAccepted)
+      if (isAccepted && !isCompleted)
       {
          questLable.text = $"{copsKilled} /1 Cops";
       }
-
-      if (!isAccepted)
+      else
       {
          questLable.text = "";
       }
-
    }
 
    public void StartQuest()
@@ -57,12 +51,12 @@ public class CopKillQuest : MonoBehaviour
       if (copsKilled == 1)
       {
          isCompleted = true;
+         // start coroutine show quest completed then hide after 5 seconds
+         // give rewards if applicable
       }
-      this.CopsKilledChangeEvent.Invoke();
+      this.CopsKilledChangeEvent.Invoke(copsKilled);
       
-      //this.OnCopsKilledChanged.Invoke(); ??
    }
-
 }
 
           
