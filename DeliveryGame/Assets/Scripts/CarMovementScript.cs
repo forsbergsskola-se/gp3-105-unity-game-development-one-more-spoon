@@ -9,9 +9,9 @@ public class CarMovementScript : MonoBehaviour
     
     // CAR MASS in unity should be set to 1000.
     public float movementSpeed = 35000;
-   
+    public float brakeForce = 0.5f;
     public float rotationSpeed = 10000;
-
+    public bool isBraking = false;
     private Rigidbody carRigidbody;
     
     // Start is called before the first frame update
@@ -23,8 +23,17 @@ public class CarMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            isBraking = true;
+        }
+        else
+        {
+            isBraking = false;
+        }
         MoveCar(movementDirection);
         Debug.Log(carRigidbody.velocity);
+        
     }
     
     public void OnCarMovement(InputAction.CallbackContext buttonPressed)
@@ -34,16 +43,28 @@ public class CarMovementScript : MonoBehaviour
 
     void MoveCar(Vector2 direction)
     {
-
-        float forwardForce = direction.y * movementSpeed;
+        if (isBraking)
+        {
+            carRigidbody.velocity *= brakeForce;
+            isBraking = false;
+        }
         
+        float forwardForce = direction.y * movementSpeed;
+   
         carRigidbody.AddForce(transform.forward * forwardForce);
-       
+        
         float RotationMovement = direction.x * rotationSpeed;
         
         carRigidbody.AddTorque(Vector3.up * RotationMovement);
         
     }
+
    
+   
+
+
+
+
+
 
 }

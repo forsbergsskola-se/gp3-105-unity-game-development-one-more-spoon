@@ -705,7 +705,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 35000
+  brakeForce: 0.5
   rotationSpeed: 10000
+  isBraking: 0
 --- !u!1 &1648678691228678828
 GameObject:
   m_ObjectHideFlags: 0

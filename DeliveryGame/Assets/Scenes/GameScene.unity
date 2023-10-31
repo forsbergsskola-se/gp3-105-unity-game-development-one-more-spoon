@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3062,6 +3062,14 @@ PrefabInstance:
     - target: {fileID: 1085558424244099990, guid: a009a3cbf880377449c9d5b24f3da867, type: 3}
       propertyPath: m_Name
       value: SEDAN
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797798677847232911, guid: a009a3cbf880377449c9d5b24f3da867, type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2780325220130246885, guid: a009a3cbf880377449c9d5b24f3da867, type: 3}
+      propertyPath: brakeForce
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 2780325220130246885, guid: a009a3cbf880377449c9d5b24f3da867, type: 3}
       propertyPath: movementSpeed
