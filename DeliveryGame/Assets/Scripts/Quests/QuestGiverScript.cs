@@ -10,30 +10,20 @@ public class QuestGiverScript : MonoBehaviour
   
   
   public GameObject questCanvas;
-
-  private void Start()
-  {
-    
-  }
+  public GameObject missionCompletedText;
+  public GameObject questStartText;
+ 
   
-  public void OnTriggerStay(Collider ThingThatIsInsideTheCollider)
+  public void OnTriggerStay(Collider thingThatIsInsideTheCollider)
   {
     CopKillQuest copKillQuest = FindFirstObjectByType<CopKillQuest>();
-    if (!copKillQuest.isAccepted)
-    {
-      
-      if (Input.GetKeyDown(KeyCode.E) && ThingThatIsInsideTheCollider.CompareTag("Player"))
+      if (Input.GetKeyDown(KeyCode.E) && thingThatIsInsideTheCollider.CompareTag("Player"))
       {
         questCanvas.SetActive(true);
+        questStartText.SetActive(!copKillQuest.isAccepted);
+        missionCompletedText.SetActive(copKillQuest.isCompleted);
       }
       
-    }
-
-    if (Input.GetKeyDown(KeyCode.E) && ThingThatIsInsideTheCollider.CompareTag("Player")&& copKillQuest.isCompleted == true)
-    {
-      onQuestCompleted();
-    }
-
 
   }
 
@@ -43,10 +33,5 @@ public class QuestGiverScript : MonoBehaviour
     {
       questCanvas.SetActive(false);
     }
-  }
-
-  public void onQuestCompleted()
-  {
-    Debug.Log("Perfect, you killed him!");
   }
 }
