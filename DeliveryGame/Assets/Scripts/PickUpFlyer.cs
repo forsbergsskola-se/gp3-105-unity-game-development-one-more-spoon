@@ -9,8 +9,7 @@ using UnityEngine.UI;
 public class PickUpFlyer : MonoBehaviour
 {
     private Player player;
-    public AddItem flyerImage;
-    public AddItem flyername;
+    public InventoryItem flyerImage;
     private void Start()
     {
         player = FindFirstObjectByType<Player>();
@@ -22,7 +21,6 @@ public class PickUpFlyer : MonoBehaviour
         {
             Destroy(gameObject);
             flyerImage.AddToInventory();
-            flyername.Addname();
         }
     }
 }

@@ -8,21 +8,14 @@ using UnityEngine.UI;
 
 public class PickUpPizza : MonoBehaviour
 {
-    private Player player;
-    public AddItem pizzaImage;
-    public AddItem pizzaname;
-    private void Start()
-    {
-        player = FindFirstObjectByType<Player>();
-    }
+    public InventoryItem pizzaImage;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Destroy(gameObject);
-            pizzaImage.AddToInventory();
-            pizzaname.Addname();
+            Destroy(this.gameObject);
+            this.pizzaImage.AddToInventory();
         }
     }
 }
