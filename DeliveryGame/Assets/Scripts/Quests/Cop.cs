@@ -9,6 +9,8 @@ public class Cop : MonoBehaviour
 
 {
     private Player player;
+    private PlayerController playerController;
+    
     public int policeHealth = 100;
     public UnityEvent OnDeath;
     public Animator policeAnimator;
@@ -18,6 +20,7 @@ public class Cop : MonoBehaviour
     private void Start()
     {
         player = FindFirstObjectByType<Player>();
+        playerController = FindFirstObjectByType<PlayerController>();
         policeAnimator = this.GetComponent<Animator>();
     }
 
@@ -31,7 +34,7 @@ public class Cop : MonoBehaviour
     
     private void OnCollisionEnter(Collision hitWithMeleeWeapon)
     {
-        if (hitWithMeleeWeapon.gameObject.CompareTag("Bat") && player.meleeAttacking)
+        if (hitWithMeleeWeapon.gameObject.CompareTag("Bat") && playerController.meleeAttacking)
         {
             policeHealth -= 25;
             Debug.Log("The Police was hit with a bat. the health is: " + policeHealth);

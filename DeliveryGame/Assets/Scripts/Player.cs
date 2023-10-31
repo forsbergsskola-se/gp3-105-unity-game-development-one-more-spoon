@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     //public static bool playerDied = false;
     
     public bool isDying = false;
-    public bool meleeAttacking = false;
+    
     
     public Vector3 startingPosition;
     public Vector3 startingRotation;

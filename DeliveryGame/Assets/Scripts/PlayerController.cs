@@ -21,7 +21,9 @@ public class PlayerController : MonoBehaviour
     bool inventoryToggled = false;
     bool isPaused = false;
     bool gunIsShooting = false;
-
+    bool isReloading = false;
+    public bool meleeAttacking = false;
+    
     public GameObject inventoryGUI;
     public GameObject pauseMenu;
     private Car car;
@@ -136,7 +138,7 @@ public class PlayerController : MonoBehaviour
         if (fireButtonPressed.performed)
         {
             var player = FindFirstObjectByType<Player>();
-            if (gunIsShooting == false && player.meleeAttacking == false )
+            if (gunIsShooting == false && meleeAttacking == false )
             {
                 
             
@@ -210,8 +212,7 @@ public class PlayerController : MonoBehaviour
 
     public void FireGun()
     {
-        
-        if (!gunIsShooting && mainHand.gun != null && mainHand.gun.ammoLeft > 0)
+        if (!gunIsShooting && mainHand.gun != null && mainHand.gun.ammoLeft > 0 && !isReloading && !gunIsShooting && !meleeAttacking)
         {
             gunIsShooting = true;
             mainHand.gun.RemoveAmmo();
@@ -234,20 +235,19 @@ public class PlayerController : MonoBehaviour
     
     public void ReloadButton(InputAction.CallbackContext reloadButtonPressed)
     {
-        if (reloadButtonPressed.performed)
+        if (reloadButtonPressed.performed && !gunIsShooting && !meleeAttacking && mainHand.gun != null)
         {
+            isReloading = true;
             Debug.Log("Reloading gun.");
             Gun gun = GetComponentInChildren<Gun>();
             gun.ReloadGun();
             animator.Play("Reloading");
-            /*if (gun.isEquipped)
-            {
-                
-            }
-            */
-
         }
-        
+    }
+    
+    public void ReloadDone()
+    {
+        isReloading = false;
     }
 
     public void AttackWithMeleeWeapon()
@@ -255,7 +255,7 @@ public class PlayerController : MonoBehaviour
         if (mainHand.bat != null)
         {
         var player = FindFirstObjectByType<Player>();
-        player.meleeAttacking = true;
+        meleeAttacking = true;
         animator.Play("MeleeAttack");
         Debug.Log("Hitting with melee weapon");
         }
@@ -266,7 +266,7 @@ public class PlayerController : MonoBehaviour
     public void MeleeHit()
     {
         var player = FindFirstObjectByType<Player>();
-        player.meleeAttacking = false;
+        meleeAttacking = false;
         
     }
 
@@ -285,7 +285,7 @@ public class PlayerController : MonoBehaviour
 
     public void SwitchWeapon(InputAction.CallbackContext switchWeaponButtonPressed)
     {
-        if (switchWeaponButtonPressed.performed)
+        if (switchWeaponButtonPressed.performed && !isReloading && !gunIsShooting && !meleeAttacking )
         {
             Debug.Log("Switching Weapons");
             gunIsEquipped = !gunIsEquipped;

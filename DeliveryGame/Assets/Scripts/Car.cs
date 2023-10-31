@@ -7,6 +7,7 @@ public class Car : MonoBehaviour
 {
     public GameObject cameraHolder;
     private Player player;
+    private PlayerController playerController;
     public bool playerIsInTheCar = false;
     
     public int carHealth;
@@ -22,6 +23,8 @@ public class Car : MonoBehaviour
     void Start()
     {
         player = FindFirstObjectByType<Player>();
+        playerController = FindFirstObjectByType<PlayerController>();
+        
     }
 
     // Update is called once per frame
@@ -57,7 +60,7 @@ public class Car : MonoBehaviour
     
      private void OnCollisionEnter(Collision hitWithMeleeWeapon)
     {
-        if (hitWithMeleeWeapon.gameObject.CompareTag("Bat") && player.meleeAttacking)
+        if (hitWithMeleeWeapon.gameObject.CompareTag("Bat") && playerController.meleeAttacking)
         {
             carHealth -= 10;
             Debug.Log("The object was hit with a bat. the health is: " + carHealth);
