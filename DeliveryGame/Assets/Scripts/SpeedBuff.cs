@@ -15,7 +15,7 @@ public class SpeedBuff : MonoBehaviour
     private void Start()
     {
         playerController = GetComponent<PlayerController>();
-        carScript = GetComponentInParent<DanielsCarMovementScript>();
+        carScript = GetComponent<DanielsCarMovementScript>();
         if (playerController != null)
         {
             playerController.movementSpeed = 9;
@@ -33,15 +33,9 @@ public class SpeedBuff : MonoBehaviour
 
     private void OnDestroy()
     {
-        
-        if (playerController != null)
-        {
-            playerController.movementSpeed = 4;
-        }
-        else
-        {
-            carScript.movementSpeed = 35000;
-        }
+        // remove the benefit from movement*
+        playerController.movementSpeed = 4;
+        carScript.movementSpeed = 35000;
     }
 
     private void Update()

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class DanielsCarMovementScript : MonoBehaviour
+public class CarMovementScript : MonoBehaviour
 {
     private Vector2 movementDirection;
     
@@ -44,5 +44,6 @@ public class DanielsCarMovementScript : MonoBehaviour
         carRigidbody.AddTorque(Vector3.up * RotationMovement);
         
     }
+   
 
 }

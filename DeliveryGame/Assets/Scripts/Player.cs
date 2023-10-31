@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     //public static bool playerDied = false;
     
     public bool isDying = false;
-    public bool meleeAttacking = false;
+    
     
     public Vector3 startingPosition;
     public Vector3 startingRotation;
@@ -88,11 +88,11 @@ public class Player : MonoBehaviour
         gun.ammoStored = ammoSaved;
     }
 
-    public void RestartGameOnDeath()
+   public void RestartGameOnDeath()
     {
         Gun gun = GetComponentInChildren<Gun>();
         moneySaved = cash;
-        ammoSaved = gun.ammoStored;
+       // ammoSaved = gun.ammoStored;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void Respawn()
@@ -131,7 +131,7 @@ public class Player : MonoBehaviour
 
     }
 
-    IEnumerator CheckHealth()
+   public IEnumerator CheckHealth()
     {
             isDying = true;
             ShowWastedText();

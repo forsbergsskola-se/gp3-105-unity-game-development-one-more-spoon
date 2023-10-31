@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UIElements;
@@ -10,34 +11,30 @@ public class CopKillQuest : MonoBehaviour
 {
    public UnityEvent onQuestStarted;
 
-   public UnityEvent CopsKilledChangeEvent;
+   public UnityEvent<int> CopsKilledChangeEvent;
    // false, true (2)
 
-   private bool isAccepted;
+   public bool isAccepted;
+   public bool isCompleted = false;
    private int copsKilled;
    public TMP_Text questLable;
    public Player player;
    public AudioSource music;
    public Slider healthbar;
+   public TMP_Text completedLable;
+   public GameObject missionCompletedText;
    
 
    public void Update()
    {
-      if (isAccepted)
+      if (isAccepted && !isCompleted)
       {
-         Debug.Log("Raise event");
+         questLable.text = $"{copsKilled} /1 Cops";
       }
-      
-      if (isAccepted)
-      {
-         questLable.text = $"{copsKilled} /2 Cops";
-      }
-
-      if (!isAccepted)
+      else
       {
          questLable.text = "";
       }
-
    }
 
    public void StartQuest()
@@ -50,12 +47,27 @@ public class CopKillQuest : MonoBehaviour
    public void OnCopKilled()
    {
       if (!this.isAccepted) return;
-      if (this.copsKilled >= 2) return;
-
-      this.copsKilled++;
-      this.CopsKilledChangeEvent.Invoke();
+      if (this.copsKilled >= 1) return;
       
-      //this.OnCopsKilledChanged.Invoke(); ??
+      this.copsKilled++;
+      if (copsKilled == 1)
+      {
+         isCompleted = true;
+         CopKillQuest copKillQuest = FindFirstObjectByType<CopKillQuest>();
+         missionCompletedText.SetActive(copKillQuest.isCompleted);
+         StartCoroutine(TurnOfMissionComplete());
+         // start coroutine show quest completed then hide after 5 seconds
+         // give rewards if applicable
+      }
+      this.CopsKilledChangeEvent.Invoke(copsKilled);
+      
+   }
+
+   public IEnumerator TurnOfMissionComplete()
+   {
+      yield return new WaitForSeconds(5);
+      CopKillQuest copKillQuest = FindFirstObjectByType<CopKillQuest>();
+      missionCompletedText.SetActive(false);
    }
 }
 

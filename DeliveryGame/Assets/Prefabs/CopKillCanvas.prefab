@@ -289,7 +289,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &741617946262294514
 RectTransform:
   m_ObjectHideFlags: 0
@@ -341,8 +341,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Hey!
 
-    Can you help me kill some cops?! You will get 200USD! Money
-    and killing cops! Good deal right?!'
+    Can you help me kill the cop that is corrupted?! You will get
+    200USD! Money and killing cops! Good deal right?!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -574,7 +574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6146485511281174819
 RectTransform:
   m_ObjectHideFlags: 0
