@@ -30,27 +30,28 @@ public class Car : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (carHealth <= 0 && playerIsInTheCar == false)
+        if (carHealth <= 0 && playerIsInTheCar == true && player.isDying == false)
         {
             player.health = 0;
-            //the player can still drive the car and dies when exits
-            //need to make the car stop moving and player dead = true;
+            this.gameObject.GetComponent<CarMovementScript>().movementSpeed = 0;
+            this.gameObject.GetComponent<CarMovementScript>().rotationSpeed = 0;
+            
             StartCoroutine(player.CheckHealth());
             
         }
     }
 
    public  void EnterCar()
-    {
-      
+   {
+       playerIsInTheCar = true;
         this.gameObject.GetComponent<CarMovementScript>().enabled = true;
          cameraHolder.SetActive(true);
     }
 
     public void ExitCar()
     {
-        this.gameObject.SetActive(true); 
-        
+        this.gameObject.SetActive(true);
+        playerIsInTheCar = false;
         this.gameObject.GetComponent<CarMovementScript>().enabled = false;
         cameraHolder.SetActive(false);
         

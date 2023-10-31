@@ -88,11 +88,11 @@ public class Player : MonoBehaviour
         gun.ammoStored = ammoSaved;
     }
 
-    public void RestartGameOnDeath()
+   public void RestartGameOnDeath()
     {
         Gun gun = GetComponentInChildren<Gun>();
         moneySaved = cash;
-        ammoSaved = gun.ammoStored;
+       // ammoSaved = gun.ammoStored;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void Respawn()
