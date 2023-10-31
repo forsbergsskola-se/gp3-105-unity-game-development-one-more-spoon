@@ -15,7 +15,7 @@ public class SpeedDebuff : MonoBehaviour
     private void Start()
     {
         playerController = GetComponent<PlayerController>();
-        carScript = GetComponent<DanielsCarMovementScript>();
+        carScript = GetComponentInParent<DanielsCarMovementScript>();
         if (playerController != null)
         {
             playerController.movementSpeed = 2;
