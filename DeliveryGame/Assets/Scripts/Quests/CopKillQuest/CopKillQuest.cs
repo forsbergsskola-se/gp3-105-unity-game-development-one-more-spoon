@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UIElements;
@@ -21,6 +22,7 @@ public class CopKillQuest : MonoBehaviour
    public AudioSource music;
    public Slider healthbar;
    public TMP_Text completedLable;
+   public GameObject missionCompletedText;
    
 
    public void Update()
@@ -51,11 +53,21 @@ public class CopKillQuest : MonoBehaviour
       if (copsKilled == 1)
       {
          isCompleted = true;
+         CopKillQuest copKillQuest = FindFirstObjectByType<CopKillQuest>();
+         missionCompletedText.SetActive(copKillQuest.isCompleted);
+         StartCoroutine(TurnOfMissionComplete());
          // start coroutine show quest completed then hide after 5 seconds
          // give rewards if applicable
       }
       this.CopsKilledChangeEvent.Invoke(copsKilled);
       
+   }
+
+   public IEnumerator TurnOfMissionComplete()
+   {
+      yield return new WaitForSeconds(5);
+      CopKillQuest copKillQuest = FindFirstObjectByType<CopKillQuest>();
+      missionCompletedText.SetActive(false);
    }
 }
 
