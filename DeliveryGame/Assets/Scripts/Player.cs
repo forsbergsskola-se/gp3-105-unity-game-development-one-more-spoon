@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
         PlayerPrefs.SetInt("Score", score);
         PlayerPrefs.SetInt("AmmoLeft", gun.ammoLeft);
         PlayerPrefs.SetInt("AmmoStored", gun.ammoStored);
-        PlayerPrefs.SetInt("PlayerScore", score);
+        
         PlayerPrefs.Save();
     }
     
