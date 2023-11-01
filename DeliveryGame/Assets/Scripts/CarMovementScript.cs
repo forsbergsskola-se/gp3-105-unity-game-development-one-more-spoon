@@ -23,15 +23,16 @@ public class CarMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            isBraking = true;
-        }
-        else
-        {
-            isBraking = false;
-        }
+ 
         MoveCar(movementDirection);
+               if (Input.GetKeyDown(KeyCode.Space))
+               {
+                   isBraking = true;
+               }
+               else
+               {
+                   isBraking = false;
+               }
         Debug.Log(carRigidbody.velocity);
         
     }
