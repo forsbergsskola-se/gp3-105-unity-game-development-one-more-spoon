@@ -19,12 +19,15 @@ public class PlayerController : MonoBehaviour
     
     public bool interactPressed = false;
     bool inventoryToggled = false;
+    bool minimapToggled = true;
     bool isPaused = false;
     bool gunIsShooting = false;
     bool isReloading = false;
     public bool meleeAttacking = false;
     
     public GameObject inventoryGUI;
+    public GameObject minimapGUI;
+    
     public GameObject pauseMenu;
     private Car car;
     private Weapon mainHand;
@@ -179,6 +182,24 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    
+    public void MiniMap(InputAction.CallbackContext minimapButtonPressed)
+    {
+        if (minimapButtonPressed.performed)
+        {
+            minimapToggled = !minimapToggled;
+            if (minimapToggled)
+            {
+                minimapGUI.SetActive(true);
+                
+            }
+            else
+            {
+                minimapGUI.SetActive(false);
+            }
+        }
+    }
+    
 
     public void Pause(InputAction.CallbackContext pauseButtonPressed)
     {
