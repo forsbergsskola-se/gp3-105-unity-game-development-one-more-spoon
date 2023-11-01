@@ -342,7 +342,7 @@ MonoBehaviour:
   m_text: 'Hey!
 
     Can you help me kill the cop that is corrupted?! You will get
-    200USD! Money and killing cops! Good deal right?!'
+    2000USD! Money and killing cops! Good deal right?!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
