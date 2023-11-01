@@ -12,46 +12,38 @@ public class PizzaQuest : MonoBehaviour
   public GameObject questText;
   public GameObject completedtext;
   public GameObject incompletedtext;
-  public bool isAccepted;
-  public bool isCompleted = false;
+  public GameObject missionCompletedText;
+  public bool iscompleted = false;
   
-  public void StartQuest()
-  {
-    if (this.isAccepted) return;
-      
-    this.isAccepted = true;
-    
-  }
   public void OnTriggerStay(Collider thingThatIsInsideTheCollider)
   {
+    Player player = thingThatIsInsideTheCollider.GetComponent<Player>();
+
+    if (iscompleted == true)
+    {
+      return;
+    }
+    
     if (Input.GetKeyDown(KeyCode.E) && thingThatIsInsideTheCollider.CompareTag("Player"))
     {
-      if (!this.isAccepted) return;
-      
-      //if (this.copsKilled >= 1) return;
-      
       questCanvas.SetActive(true); questText.SetActive(false);
-      completedtext.SetActive(inventoryItem.count >= 3);
       incompletedtext.SetActive(inventoryItem.count < 3);
+      completedtext.SetActive(inventoryItem.count >= 3);
+      
+      if (inventoryItem.count >=3 && iscompleted == false)
+      {
+        player.AddCash(2000);
+        iscompleted = true;
+      }
     }
   }
-/*questCanvas.SetActive(true); questText.SetActive(false);
-      if (inventoryItem.count >= 3)
-      {
-        completedtext.SetActive(true);
-      }
 
-      if (inventoryItem.count < 3)
-      {
-        incompletedtext.SetActive(true);
-      }*/
-  
   public void OnTriggerExit(Collider other)
   {
-    if (other.CompareTag("Player"));
+    if (other.CompareTag("Player")) ;
     {
       questCanvas.SetActive(false);
     }
+
   }
-  
 }

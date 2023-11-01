@@ -18,7 +18,7 @@ public class PickUpMoney : MonoBehaviour
         if (player != null)
         {
             Destroy(gameObject);
-            player.AddCash(10);
+            player.AddCash(100);
         }
     }
 }
