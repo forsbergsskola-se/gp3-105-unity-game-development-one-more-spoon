@@ -8,7 +8,7 @@ public class QuestGiverPizza : MonoBehaviour
 {
   
   public GameObject questCanvas;
-  
+  public GameObject questText;
   
   public void OnTriggerStay(Collider thingThatIsInsideTheCollider)
   {
@@ -21,7 +21,7 @@ public class QuestGiverPizza : MonoBehaviour
     
     if (Input.GetKeyDown(KeyCode.E) && thingThatIsInsideTheCollider.CompareTag("Player"))
     {
-      questCanvas.SetActive(true);
+      questCanvas.SetActive(true); questText.SetActive(true);
     }
   }
 
@@ -29,7 +29,7 @@ public class QuestGiverPizza : MonoBehaviour
   {
     if (other.CompareTag("Player"));
     {
-      questCanvas.SetActive(false);
+      questCanvas.SetActive(false); questText.SetActive(false);
     }
   }
   

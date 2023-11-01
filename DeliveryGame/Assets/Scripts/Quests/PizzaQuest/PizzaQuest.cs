@@ -33,6 +33,7 @@ public class PizzaQuest : MonoBehaviour
       if (inventoryItem.count >=3 && iscompleted == false)
       {
         player.AddCash(2000);
+        missionCompletedText.SetActive(iscompleted == false);
         iscompleted = true;
       }
     }
