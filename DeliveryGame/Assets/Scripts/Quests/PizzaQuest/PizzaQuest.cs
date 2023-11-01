@@ -11,7 +11,7 @@ public class PizzaQuest : MonoBehaviour
   public GameObject questCanvas;
   public GameObject questText;
   public GameObject completedtext;
-  public GameObject iscompletedtext;
+  public GameObject incompletedtext;
   //public GameObject missionCompletedCanvas;
   //public GameObject missionCompletedText;
   public bool iscompleted = false;
@@ -29,7 +29,7 @@ public class PizzaQuest : MonoBehaviour
     {
       questCanvas.SetActive(true); questText.SetActive(false);
       completedtext.SetActive(inventoryItem.count >= 3);
-      iscompletedtext.SetActive(inventoryItem.count < 3);
+      incompletedtext.SetActive(inventoryItem.count < 3);
       
       if (inventoryItem.count >=3 && iscompleted == false)
       {

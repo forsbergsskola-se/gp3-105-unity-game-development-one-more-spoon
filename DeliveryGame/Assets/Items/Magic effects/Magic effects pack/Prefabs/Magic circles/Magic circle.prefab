@@ -19593,7 +19593,7 @@ GameObject:
   - component: {fileID: 797784518864179116}
   - component: {fileID: 5796355061092580784}
   - component: {fileID: 8690440801317542360}
-  - component: {fileID: 4451491418257283405}
+  - component: {fileID: 4568257407005145856}
   m_Layer: 0
   m_Name: Magic circle
   m_TagString: Untagged
@@ -19611,7 +19611,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4305988522492003399}
@@ -24495,7 +24495,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.5, y: 2.5, z: 2.5}
   m_Center: {x: 0, y: 1.11, z: 0}
---- !u!114 &4451491418257283405
+--- !u!114 &4568257407005145856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24504,10 +24504,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3744133877081091469}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6528b18c7896438a9c9c3fd1c6bb6fda, type: 3}
+  m_Script: {fileID: 11500000, guid: 27cef8ebff654dc42a342ce942f03639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questCanvas: {fileID: 0}
 --- !u!1 &7673830656541891808
 GameObject:
   m_ObjectHideFlags: 0
