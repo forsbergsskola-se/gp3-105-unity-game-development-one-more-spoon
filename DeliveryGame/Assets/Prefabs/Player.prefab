@@ -2258,7 +2258,7 @@ Transform:
   m_GameObject: {fileID: 6785475141660642634}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.5, z: -0, w: 0.8660254}
-  m_LocalPosition: {x: -0.1, y: 13.01, z: -4.6}
+  m_LocalPosition: {x: 16.32, y: 11.88, z: -13.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2588,7 +2588,7 @@ MonoBehaviour:
   interactPressed: 0
   meleeAttacking: 0
   inventoryGUI: {fileID: 0}
-  minimapGUI: {fileID: 0}
+  minimapGUI: {fileID: 1109891638022575665}
   pauseMenu: {fileID: 0}
   gunMeshHolder: {fileID: 7150261024722405544}
   batMeshHolder: {fileID: 4566299023310148722}
@@ -4088,6 +4088,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02cdfe6db8687a14a94755610b8b5c7d, type: 3}
+--- !u!1 &1109891638022575665 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 618395886966069431, guid: 02cdfe6db8687a14a94755610b8b5c7d, type: 3}
+  m_PrefabInstance: {fileID: 573042748923301510}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7679755922333443771 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7881336776706287677, guid: 02cdfe6db8687a14a94755610b8b5c7d, type: 3}
