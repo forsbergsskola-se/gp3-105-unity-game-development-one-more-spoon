@@ -948,12 +948,12 @@ GameObject:
   - component: {fileID: 7657070809656738707}
   - component: {fileID: 19401083251160775}
   m_Layer: 5
-  m_Name: RaceCanvas
+  m_Name: PizzaQuestCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1513323393978657183
 RectTransform:
   m_ObjectHideFlags: 0

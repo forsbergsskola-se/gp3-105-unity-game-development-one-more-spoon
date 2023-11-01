@@ -5,23 +5,31 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class PizzaQuestCompleted : MonoBehaviour
+public class PizzaQuest : MonoBehaviour
 {
   public InventoryItem inventoryItem;
   public GameObject questCanvas;
   public GameObject questText;
   public GameObject completedtext;
   public GameObject incompletedtext;
+  public bool isAccepted;
+  public bool isCompleted = false;
   
-  private void Start()
+  public void StartQuest()
   {
+    if (this.isAccepted) return;
+      
+    this.isAccepted = true;
     
   }
-  
   public void OnTriggerStay(Collider thingThatIsInsideTheCollider)
   {
     if (Input.GetKeyDown(KeyCode.E) && thingThatIsInsideTheCollider.CompareTag("Player"))
     {
+      if (!this.isAccepted) return;
+      
+      //if (this.copsKilled >= 1) return;
+      
       questCanvas.SetActive(true); questText.SetActive(false);
       completedtext.SetActive(inventoryItem.count >= 3);
       incompletedtext.SetActive(inventoryItem.count < 3);
