@@ -28,8 +28,8 @@ public class PizzaQuest : MonoBehaviour
     if (Input.GetKeyDown(KeyCode.E) && thingThatIsInsideTheCollider.CompareTag("Player"))
     {
       questCanvas.SetActive(true); questText.SetActive(false);
-      iscompletedtext.SetActive(inventoryItem.count < 3);
       completedtext.SetActive(inventoryItem.count >= 3);
+      iscompletedtext.SetActive(inventoryItem.count < 3);
       
       if (inventoryItem.count >=3 && iscompleted == false)
       {
