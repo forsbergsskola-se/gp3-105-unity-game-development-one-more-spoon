@@ -44,7 +44,7 @@ public class TimeController : MonoBehaviour
     private void RotateSun()
     {
         float sunLightRotation;
-        if (currentTime.TimeOfDay > sunriseTime && currentTime.TimeOfDay < sunsetTime) ;
+        if (currentTime.TimeOfDay > sunriseTime && currentTime.TimeOfDay < sunsetTime) 
         {
             TimeSpan sunriesToSunsetDuration = CalculateTimeDifference(sunsetTime, sunsetTime);
             TimeSpan timeSinceSunrise = CalculateTimeDifference(sunriseTime, currentTime.TimeOfDay);
