@@ -323,10 +323,9 @@ public class PlayerController : MonoBehaviour
                 batMeshHolder.SetActive(false);
                 
                 mainHandImage.texture = gunTexture;
-                mainHandImageInventory.texture = gunTexture;
-                
+                //mainHandImageInventory.texture = gunTexture;
                 offHandImage.texture = batTexture;
-                offHandImageInventory.texture = batTexture;
+                //offHandImageInventory.texture = batTexture;
 
 
             }
@@ -336,10 +335,10 @@ public class PlayerController : MonoBehaviour
                 batMeshHolder.SetActive(true);
                 
                 mainHandImage.texture = batTexture;
-                mainHandImageInventory.texture = batTexture;
+                //mainHandImageInventory.texture = batTexture;
                 
                 offHandImage.texture = gunTexture;
-                offHandImageInventory.texture = gunTexture;
+                //offHandImageInventory.texture = gunTexture;
 
                 //Remove the 2 to go back to Daniels version.
             }

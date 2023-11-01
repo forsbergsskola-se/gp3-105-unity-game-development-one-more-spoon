@@ -2748,6 +2748,7 @@ MonoBehaviour:
   player: {fileID: 6785475141660642634}
   cameraOffset: {x: 0, y: 1.73, z: -2.31}
   cameraRotationOffset: {x: 10.56, y: 0, z: 0}
+  cameraDelay: 3.96
 --- !u!1 &6957038802266229543
 GameObject:
   m_ObjectHideFlags: 0
