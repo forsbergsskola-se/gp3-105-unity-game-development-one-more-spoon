@@ -72,9 +72,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 496d2e8a371ab434a921bd8fb9e3e5e2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 206244475175920977}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 496d2e8a371ab434a921bd8fb9e3e5e2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7163528801764098532}
   m_SourcePrefab: {fileID: 100100000, guid: 496d2e8a371ab434a921bd8fb9e3e5e2, type: 3}
 --- !u!1 &4810941118634724799 stripped
 GameObject:
@@ -163,6 +160,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questCanvas: {fileID: 0}
+  questStartText: {fileID: 0}
+  rewardCanvasText: {fileID: 0}
+  questHasBeenRewarded: 0
 --- !u!65 &206244475175920977
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -183,17 +183,4 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 3, y: 3, z: 3}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7163528801764098532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4810941118634724799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 903f45f99053643c4846b4d14c5f9b45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questCanvas: {fileID: 0}
+  m_Center: {x: 0, y: 1, z: 0}
