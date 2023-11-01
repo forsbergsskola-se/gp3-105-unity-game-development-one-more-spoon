@@ -34,8 +34,14 @@ public class SpeedDebuff : MonoBehaviour
     private void OnDestroy()
     {
         // remove the benefit from movement*
-        playerController.movementSpeed = 4;
-        carScript.movementSpeed = 35000;
+        if (playerController != null)
+        {
+            playerController.movementSpeed = 4;
+        }
+        else
+        {
+            carScript.movementSpeed = 35000;
+        }
     }
 
     private void Update()
