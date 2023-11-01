@@ -11,10 +11,10 @@ public class Player : MonoBehaviour
 {
     public int maxHealth = 100;
     public int health = 100;
-    public int score = 0;
-    public int cash = 100;
-    public static int moneySaved = 100;
-    public static int ammoSaved = 100;
+    private int score;
+    private int cash;
+    //public static int moneySaved = 100;
+    //public static int ammoSaved = 100;
     //public static bool playerDied = false;
     
     public bool isDying = false;
@@ -28,12 +28,19 @@ public class Player : MonoBehaviour
     public TMP_Text cashText;
     
     public GameObject wastedText;
-    
+
+    private void Awake()
+    {
+        LoadSavedGame();
+    }
+
+
+
     private void Start()
     {
         startingPosition = this.transform.position;
         startingRotation = this.transform.rotation.eulerAngles;
-        TransferMoneyAndAmmoBackToPlayerAfterRestart();
+        // TransferMoneyAndAmmoBackToPlayerAfterRestart();
 
 
     }
@@ -75,23 +82,51 @@ public class Player : MonoBehaviour
     {
         cash -= removedCash;
     }
+    public void SaveGame()
+    {
+        Gun gun = GetComponentInChildren<Gun>();
+        PlayerPrefs.SetInt("Cash", cash);
+        PlayerPrefs.SetInt("Score", score);
+        PlayerPrefs.SetInt("AmmoLeft", gun.ammoLeft);
+        PlayerPrefs.SetInt("AmmoStored", gun.ammoStored);
+        PlayerPrefs.Save();
+    }
+    
+    public void SaveCashOnDeath()
+    {
+        Gun gun = GetComponentInChildren<Gun>();
+        PlayerPrefs.SetInt("Cash", cash);
+    }
+    
+    private void LoadSavedGame()
+    {
+        Gun gun = GetComponentInChildren<Gun>();
+        if (PlayerPrefs.HasKey("PlayerScore"))
+        {
+            cash = PlayerPrefs.GetInt("Cash");
+            score = PlayerPrefs.GetInt("Score");
+            gun.ammoLeft = PlayerPrefs.GetInt("AmmoLeft");
+            gun.ammoStored = PlayerPrefs.GetInt("AmmoStored");
+        }
+    }
 
     public void RemoveCashOnDeath()
     {
         cash = cash / 2;
     }
-
+    
+    
     public void TransferMoneyAndAmmoBackToPlayerAfterRestart()
     {
         Gun gun = GetComponentInChildren<Gun>();
-        cash = moneySaved;
-        gun.ammoStored = ammoSaved;
+        //cash = moneySaved;
+        //gun.ammoStored = ammoSaved;
     }
 
    public void RestartGameOnDeath()
     {
         Gun gun = GetComponentInChildren<Gun>();
-        moneySaved = cash;
+        // moneySaved = cash;
        // ammoSaved = gun.ammoStored;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
@@ -139,6 +174,7 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(3);
             HideWastedText();
             RemoveCashOnDeath();
+            SaveCashOnDeath();
             RestartGameOnDeath();
             //Respawn();
     }
