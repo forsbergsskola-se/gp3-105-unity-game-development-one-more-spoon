@@ -11,8 +11,9 @@ public class PizzaQuest : MonoBehaviour
   public GameObject questCanvas;
   public GameObject questText;
   public GameObject completedtext;
-  public GameObject incompletedtext;
-  public GameObject missionCompletedText;
+  public GameObject iscompletedtext;
+  //public GameObject missionCompletedCanvas;
+  //public GameObject missionCompletedText;
   public bool iscompleted = false;
   
   public void OnTriggerStay(Collider thingThatIsInsideTheCollider)
@@ -27,13 +28,14 @@ public class PizzaQuest : MonoBehaviour
     if (Input.GetKeyDown(KeyCode.E) && thingThatIsInsideTheCollider.CompareTag("Player"))
     {
       questCanvas.SetActive(true); questText.SetActive(false);
-      incompletedtext.SetActive(inventoryItem.count < 3);
+      iscompletedtext.SetActive(inventoryItem.count < 3);
       completedtext.SetActive(inventoryItem.count >= 3);
       
       if (inventoryItem.count >=3 && iscompleted == false)
       {
         player.AddCash(2000);
-        missionCompletedText.SetActive(iscompleted == false);
+        //missionCompletedCanvas.SetActive(iscompleted == false);
+        //missionCompletedText.SetActive(iscompleted == false);
         iscompleted = true;
       }
     }

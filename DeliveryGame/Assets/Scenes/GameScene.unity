@@ -1176,7 +1176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questCanvas: {fileID: 907769804}
-  questText: {fileID: 0}
+  questText: {fileID: 1300529819}
 --- !u!114 &584650505 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7317622659867123224, guid: 52aadd76a13c3a543a3b0bdc127bfdb4, type: 3}
@@ -3235,10 +3235,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 826283013962711011, guid: e651e75f010f32b4aa3f2dfb6f0fcadf, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1513323393978657183, guid: e651e75f010f32b4aa3f2dfb6f0fcadf, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3317,14 +3313,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1513323393978657183, guid: e651e75f010f32b4aa3f2dfb6f0fcadf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4812624197433996580, guid: e651e75f010f32b4aa3f2dfb6f0fcadf, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6897995914551715287, guid: e651e75f010f32b4aa3f2dfb6f0fcadf, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7931428026064089969, guid: e651e75f010f32b4aa3f2dfb6f0fcadf, type: 3}
@@ -3644,9 +3632,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 699569999}
     - target: {fileID: 7761978387737231713, guid: b1ae86901ada0c740acf9af18f866899, type: 3}
+      propertyPath: iscompletedtext
+      value: 
+      objectReference: {fileID: 1598198338}
+    - target: {fileID: 7761978387737231713, guid: b1ae86901ada0c740acf9af18f866899, type: 3}
       propertyPath: missionCompletedText
       value: 
       objectReference: {fileID: 1598198338}
+    - target: {fileID: 7761978387737231713, guid: b1ae86901ada0c740acf9af18f866899, type: 3}
+      propertyPath: missionCompletedCanvas
+      value: 
+      objectReference: {fileID: 113302825}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
