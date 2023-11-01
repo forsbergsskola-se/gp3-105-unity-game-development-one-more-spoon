@@ -1797,6 +1797,7 @@ MonoBehaviour:
   player: {fileID: 1807379097}
   music: {fileID: 0}
   completedLable: {fileID: 1662500711}
+  missionCompletedText: {fileID: 0}
 --- !u!114 &816166560 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 533126410021490556, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
@@ -2433,8 +2434,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questCanvas: {fileID: 5025305372481373730}
-  missionCompletedText: {fileID: 1910602259}
   questStartText: {fileID: 430961583}
+  rewardCanvasText: {fileID: 0}
+  questHasBeenRewarded: 0
 --- !u!1001 &1114004540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4128,11 +4130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2fd5bca9d853f748b4621865ef1e13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1910602259 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 310241256605706687, guid: f0613bf2306c80440ad3fcb9ea0ca562, type: 3}
-  m_PrefabInstance: {fileID: 755419819125624310}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1964756351 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2190799185164601789, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
@@ -4212,6 +4209,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1378941774786631999, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378941774786631999, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.83
+      objectReference: {fileID: 0}
     - target: {fileID: 2286923915162251861, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
       propertyPath: cashText
       value: 
@@ -4228,6 +4233,18 @@ PrefabInstance:
       propertyPath: wastedText
       value: 
       objectReference: {fileID: 701306929}
+    - target: {fileID: 5340311873722285066, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340311873722285066, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340311873722285066, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.6
+      objectReference: {fileID: 0}
     - target: {fileID: 7608475735808140483, guid: 20b19b46404cfd94e8f1382b0bfab56a, type: 3}
       propertyPath: m_Name
       value: Player
