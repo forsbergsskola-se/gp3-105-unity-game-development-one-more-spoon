@@ -22,7 +22,7 @@ public class PickUpFlyer : MonoBehaviour
         {
             Destroy(gameObject);
             flyerImage.AddToInventory();
-            flyerText.AddToInventory();
+            flyerText.AddTextToinventory();
         }
     }
 }

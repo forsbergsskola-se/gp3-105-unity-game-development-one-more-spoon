@@ -34,7 +34,7 @@ public class PickUpIceCream : MonoBehaviour
         {
             Destroy(gameObject);
             icecreamImage.AddToInventory();
-            icecreamText.AddToInventory();
+            icecreamText.AddTextToinventory();
             player.AddScore(10 * Icecreams);
             Icecreams++;
         }

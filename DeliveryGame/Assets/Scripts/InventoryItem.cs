@@ -13,4 +13,11 @@ public class InventoryItem : MonoBehaviour
             countLabel.text = count.ToString();
             countLabel.gameObject.SetActive(true);
     }
+
+    public void AddTextToinventory()
+    {
+        gameObject.SetActive(true);
+    }
+    
 }
+
