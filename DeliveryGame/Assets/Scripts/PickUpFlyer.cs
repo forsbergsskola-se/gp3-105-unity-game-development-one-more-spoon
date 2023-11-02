@@ -10,6 +10,7 @@ public class PickUpFlyer : MonoBehaviour
 {
     private Player player;
     public InventoryItem flyerImage;
+    public InventoryItem flyerText;
     private void Start()
     {
         player = FindFirstObjectByType<Player>();
@@ -21,6 +22,7 @@ public class PickUpFlyer : MonoBehaviour
         {
             Destroy(gameObject);
             flyerImage.AddToInventory();
+            flyerText.AddToInventory();
         }
     }
 }

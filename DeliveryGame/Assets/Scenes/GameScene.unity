@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -187,6 +187,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: pizzaText
+      value: 
+      objectReference: {fileID: 1283313076}
+    - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: pizzaImage
       value: 
       objectReference: {fileID: 983761856}
@@ -328,6 +332,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8610353375878419544, guid: 9dcc1b6a18e3a8b4ab2b1159a769d3f0, type: 3}
+      propertyPath: flyerText
+      value: 
+      objectReference: {fileID: 931125041}
+    - target: {fileID: 8610353375878419544, guid: 9dcc1b6a18e3a8b4ab2b1159a769d3f0, type: 3}
       propertyPath: flyername
       value: 
       objectReference: {fileID: 931125041}
@@ -397,6 +405,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8610353375878419544, guid: 9dcc1b6a18e3a8b4ab2b1159a769d3f0, type: 3}
+      propertyPath: flyerText
+      value: 
+      objectReference: {fileID: 931125041}
     - target: {fileID: 8610353375878419544, guid: 9dcc1b6a18e3a8b4ab2b1159a769d3f0, type: 3}
       propertyPath: flyername
       value: 
@@ -526,17 +538,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d338b32df39d31b49a84ba4fcb4c893d, type: 3}
---- !u!114 &293094607 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5443783198788044774, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
-  m_PrefabInstance: {fileID: 609360792}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &326146173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,6 +1231,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: pizzaText
+      value: 
+      objectReference: {fileID: 1283313076}
+    - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: pizzaImage
       value: 
       objectReference: {fileID: 983761856}
@@ -1321,6 +1326,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: pizzaText
+      value: 
+      objectReference: {fileID: 1283313076}
+    - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: pizzaImage
       value: 
       objectReference: {fileID: 983761856}
@@ -1342,30 +1351,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 558243494474387636, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -49.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346717873200592407, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
-      propertyPath: m_text
-      value: Off Hand
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346717873200592407, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
-      propertyPath: m_fontSize
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346717873200592407, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 2356395612715594573, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3895267083691788765, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3944988885377870081, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1446,55 +1431,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4831261249245774257, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5622392828680559323, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -49
-      objectReference: {fileID: 0}
-    - target: {fileID: 6042263021578528610, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8131026688574442226, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
-      propertyPath: m_text
-      value: Main Hand
-      objectReference: {fileID: 0}
-    - target: {fileID: 8131026688574442226, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
-      propertyPath: m_fontSize
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 8131026688574442226, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 8217551801503150481, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8873935095283731818, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
       propertyPath: m_Name
       value: InventoryCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 8873935095283731818, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7287478853142664111, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
-    m_RemovedGameObjects:
-    - {fileID: 3895267083691788765, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
-    - {fileID: 2356395612715594573, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 248335550074714476, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 983761854}
-    - targetCorrespondingSourceObject: {fileID: 7788905043246864155, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1283313072}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
 --- !u!4 &660397841 stripped
 Transform:
@@ -1938,13 +1882,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: pizzaText
+      value: 
+      objectReference: {fileID: 1283313076}
+    - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: pizzaname
       value: 
       objectReference: {fileID: 1283313072}
     - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: pizzaImage
       value: 
-      objectReference: {fileID: 983761854}
+      objectReference: {fileID: 983761856}
     - target: {fileID: 7605244347692187188, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: amplitude
       value: 0.25
@@ -2484,31 +2432,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7872849373123423215, guid: 0499341bbb443b24e9086b5f77334407, type: 3}
   m_PrefabInstance: {fileID: 974468125}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &983761850 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 248335550074714476, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
+--- !u!114 &983761854 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 18804818447313613, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
   m_PrefabInstance: {fileID: 609360792}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &983761854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 983761850}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2711ba784687437d9add63dea21be3a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 0
-  countLabel: {fileID: 293094607}
 --- !u!114 &983761856 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6638829628586659893, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
   m_PrefabInstance: {fileID: 609360792}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 983761850}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2711ba784687437d9add63dea21be3a2, type: 3}
@@ -2763,6 +2703,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8610353375878419544, guid: 9dcc1b6a18e3a8b4ab2b1159a769d3f0, type: 3}
+      propertyPath: flyerText
+      value: 
+      objectReference: {fileID: 931125041}
+    - target: {fileID: 8610353375878419544, guid: 9dcc1b6a18e3a8b4ab2b1159a769d3f0, type: 3}
       propertyPath: flyername
       value: 
       objectReference: {fileID: 931125041}
@@ -2838,13 +2782,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: pizzaText
+      value: 
+      objectReference: {fileID: 1283313076}
+    - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: pizzaname
       value: 
       objectReference: {fileID: 1283313072}
     - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: pizzaImage
       value: 
-      objectReference: {fileID: 983761854}
+      objectReference: {fileID: 983761856}
     - target: {fileID: 7605244347692187188, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: amplitude
       value: 0.25
@@ -2863,25 +2811,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4777060776833552, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
   m_PrefabInstance: {fileID: 1194141581}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1283313068 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7788905043246864155, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
+--- !u!114 &1283313072 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8196457305286856572, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
   m_PrefabInstance: {fileID: 609360792}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1283313072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283313068}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2711ba784687437d9add63dea21be3a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 0
-  countLabel: {fileID: 0}
+--- !u!114 &1283313076 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 832546880796902356, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
+  m_PrefabInstance: {fileID: 609360792}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2711ba784687437d9add63dea21be3a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1299930044
 GameObject:
   m_ObjectHideFlags: 0
@@ -3353,6 +3304,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8610353375878419544, guid: 9dcc1b6a18e3a8b4ab2b1159a769d3f0, type: 3}
+      propertyPath: flyerText
+      value: 
+      objectReference: {fileID: 931125041}
+    - target: {fileID: 8610353375878419544, guid: 9dcc1b6a18e3a8b4ab2b1159a769d3f0, type: 3}
       propertyPath: flyername
       value: 
       objectReference: {fileID: 931125041}
@@ -3769,6 +3724,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: pizzaText
+      value: 
+      objectReference: {fileID: 1283313076}
+    - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: pizzaImage
       value: 
       objectReference: {fileID: 983761856}
@@ -3851,6 +3810,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: pizzaText
+      value: 
+      objectReference: {fileID: 1283313076}
     - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: pizzaImage
       value: 
@@ -4052,13 +4015,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: pizzaText
+      value: 
+      objectReference: {fileID: 1283313076}
+    - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: pizzaname
       value: 
       objectReference: {fileID: 1283313072}
     - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: pizzaImage
       value: 
-      objectReference: {fileID: 983761854}
+      objectReference: {fileID: 983761856}
     - target: {fileID: 7605244347692187188, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: amplitude
       value: 0.25
@@ -4287,6 +4254,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8610353375878419544, guid: 9dcc1b6a18e3a8b4ab2b1159a769d3f0, type: 3}
+      propertyPath: flyerText
+      value: 
+      objectReference: {fileID: 931125041}
     - target: {fileID: 8610353375878419544, guid: 9dcc1b6a18e3a8b4ab2b1159a769d3f0, type: 3}
       propertyPath: flyername
       value: 

@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 2130713757040730920}
   - component: {fileID: 6638829628586659893}
   - component: {fileID: 4283590788435517610}
+  - component: {fileID: 18804818447313613}
   m_Layer: 5
   m_Name: ImageItem2
   m_TagString: Untagged
@@ -167,6 +168,20 @@ MonoBehaviour:
   count: 0
   countLabel: {fileID: 5443783198788044774}
 --- !u!114 &4283590788435517610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248335550074714476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2711ba784687437d9add63dea21be3a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 0
+  countLabel: {fileID: 5443783198788044774}
+--- !u!114 &18804818447313613
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -514,7 +529,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f73f68fe6815f5548a6c2a61b9e49add, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9d4143c19529834981ac6821a04aecd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -909,7 +924,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f73f68fe6815f5548a6c2a61b9e49add, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f26fa8880b3aeef4b8516c82dc12f2a5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2183,7 +2198,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bat
+  m_text: Off Hand
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2809,7 +2824,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gun
+  m_text: Main Hand
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3655,6 +3670,7 @@ GameObject:
   - component: {fileID: 832546880796902356}
   - component: {fileID: 7602002777213759984}
   - component: {fileID: 3539423427325133586}
+  - component: {fileID: 8196457305286856572}
   m_Layer: 5
   m_Name: PizzaText
   m_TagString: Untagged
@@ -3807,6 +3823,20 @@ MonoBehaviour:
   count: 0
   countLabel: {fileID: 0}
 --- !u!114 &3539423427325133586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7788905043246864155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2711ba784687437d9add63dea21be3a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 0
+  countLabel: {fileID: 0}
+--- !u!114 &8196457305286856572
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
