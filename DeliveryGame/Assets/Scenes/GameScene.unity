@@ -5471,6 +5471,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4828033498142697571, guid: 980e71924c66bfb4fa79f28cd98afca3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1598143435}
+    - target: {fileID: 4828033498142697571, guid: 980e71924c66bfb4fa79f28cd98afca3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828033498142697571, guid: 980e71924c66bfb4fa79f28cd98afca3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenuFunctions, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5285421537460162890, guid: 980e71924c66bfb4fa79f28cd98afca3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6602559995551802010, guid: 980e71924c66bfb4fa79f28cd98afca3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1598143435}
+    - target: {fileID: 6602559995551802010, guid: 980e71924c66bfb4fa79f28cd98afca3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6602559995551802010, guid: 980e71924c66bfb4fa79f28cd98afca3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenuFunctions, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7812263214622931989, guid: 980e71924c66bfb4fa79f28cd98afca3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9144524261626060114, guid: 980e71924c66bfb4fa79f28cd98afca3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
