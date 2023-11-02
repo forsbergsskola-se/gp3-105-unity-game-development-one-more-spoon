@@ -16,8 +16,9 @@ public class CameraScript : MonoBehaviour
         Vector3 targetPosition = player.transform.position + player.transform.TransformDirection(this.cameraOffset);
         this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, Time.deltaTime * cameraDelay);
         
-        this.transform.rotation = player.transform.rotation * Quaternion.Euler(this.cameraRotationOffset);
-        
+        Vector3 cameraRotation= this.cameraRotationOffset;
+        Quaternion targetRotation = player.transform.rotation * Quaternion.Euler(cameraRotation);
+        this.transform.rotation = Quaternion.Slerp(this.transform.rotation, targetRotation, Time.deltaTime * cameraDelay);
 
     }
 }
