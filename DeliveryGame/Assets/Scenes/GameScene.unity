@@ -186,6 +186,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2902273052469383706, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.838
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902273052469383706, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.512
+      objectReference: {fileID: 0}
     - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: pizzaText
       value: 
@@ -1359,6 +1367,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2902273052469383706, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.906
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902273052469383706, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.575
+      objectReference: {fileID: 0}
     - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: pizzaText
       value: 
@@ -1453,6 +1469,18 @@ PrefabInstance:
     - target: {fileID: 4777060776833552, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902273052469383706, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.468
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902273052469383706, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.837
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902273052469383706, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.847
       objectReference: {fileID: 0}
     - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: pizzaText
@@ -1574,7 +1602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8873935095283731818, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6638829628586659893, guid: a3175e581fcd7f54b858b31cafdeece2, type: 3}
@@ -1990,6 +2018,14 @@ PrefabInstance:
     - target: {fileID: 4777060776833552, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902273052469383706, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.157
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902273052469383706, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.581
       objectReference: {fileID: 0}
     - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: pizzaText
@@ -2879,6 +2915,14 @@ PrefabInstance:
     - target: {fileID: 4777060776833552, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902273052469383706, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.873
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902273052469383706, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.705
       objectReference: {fileID: 0}
     - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: pizzaText
@@ -3811,6 +3855,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2902273052469383706, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.924
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902273052469383706, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.502
+      objectReference: {fileID: 0}
     - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: pizzaText
       value: 
@@ -3897,6 +3949,14 @@ PrefabInstance:
     - target: {fileID: 4777060776833552, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902273052469383706, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.906
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902273052469383706, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.574
       objectReference: {fileID: 0}
     - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: pizzaText
@@ -4068,11 +4128,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4777060776833552, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.88
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 4777060776833552, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.24
+      value: -15.619
       objectReference: {fileID: 0}
     - target: {fileID: 4777060776833552, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4101,26 +4161,6 @@ PrefabInstance:
     - target: {fileID: 4777060776833552, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
-      propertyPath: pizzaText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
-      propertyPath: pizzaname
-      value: 
-      objectReference: {fileID: 1283313072}
-    - target: {fileID: 4896441552146776932, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
-      propertyPath: pizzaImage
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7605244347692187188, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
-      propertyPath: amplitude
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7605244347692187188, guid: 8143c9b784dfb2649b7d3ad74a4ee10e, type: 3}
-      propertyPath: frequency
-      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
