@@ -17,7 +17,7 @@ public class PickUpPizza : MonoBehaviour
         {
             Destroy(this.gameObject);
             this.pizzaImage.AddToInventory();
-            pizzaText.AddToInventory();
+            pizzaText.AddTextToinventory();
         }
     }
 }
