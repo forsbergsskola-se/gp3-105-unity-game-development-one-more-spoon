@@ -21,6 +21,9 @@ public class MainMenu : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("Instructions");
     }
 
-   
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
    
 }
