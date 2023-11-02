@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class PickUpPizza : MonoBehaviour
 {
     public InventoryItem pizzaImage;
+    public InventoryItem pizzaText;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,6 +17,7 @@ public class PickUpPizza : MonoBehaviour
         {
             Destroy(this.gameObject);
             this.pizzaImage.AddToInventory();
+            pizzaText.AddToInventory();
         }
     }
 }
